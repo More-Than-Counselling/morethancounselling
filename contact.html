@@ -290,6 +290,12 @@
     </div>
     <button type="submit" class="btn-primary" style="width:100%;border:none;cursor:pointer;">Send My Enquiry</button>
     <p class="form-note">Fionna will be in touch within 24 hours &middot; All enquiries are confidential</p>
+  
+    <div id="form-thankyou" style="display:none; text-align:center; padding:3rem 2rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--deep)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1.2rem;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; color:var(--deep); font-size:2rem; margin-bottom:1rem;">Thank you for reaching out</h2>
+      <p style="color:var(--text-light); font-size:1.05rem; line-height:1.7;">We will be in touch with you very soon.</p>
+    </div>
   </form>
 </section>
 
@@ -302,7 +308,7 @@
       <p class="section-body">Sessions are available in-person and online... Reach out below and Fionna will be in touch within 24 hours to discuss how she can support you.</p>
       <p class="section-body" style="margin-top:1rem;">All enquiries are completely confidential... there's no pressure, no commitment... just a conversation.</p>
     </div>
-    <form class="contact-form" onsubmit="handleSubmit(event)">
+    <form id="contact-form" class="contact-form" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
@@ -377,5 +383,14 @@
   });
 </script>
 
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.style.display = 'none';
+      document.getElementById('form-thankyou').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('form-thankyou').offsetTop - 100, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
