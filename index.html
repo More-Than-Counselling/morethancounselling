@@ -424,12 +424,34 @@
 
 
   <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('open');
+    }
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    reveals.forEach(r => observer.observe(r));
+    function handleSubmit(e) {
       e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('form-thankyou').style.display = 'block';
-      window.scrollTo({ top: document.getElementById('form-thankyou').offsetTop - 100, behavior: 'smooth' });
-    });
+      const form = e.target;
+      const data = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(data).toString()
+      }).then(function() {
+        form.style.display = 'none';
+        var ty = document.getElementById('form-thankyou');
+        if (ty) ty.style.display = 'block';
+      }).catch(function() {
+        form.style.display = 'none';
+        var ty = document.getElementById('form-thankyou');
+        if (ty) ty.style.display = 'block';
+      });
+    }
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(l => { if (l.href === window.location.href) l.classList.add('active'); });
   </script>
 </body>
 </html>
