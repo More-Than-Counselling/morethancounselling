@@ -255,7 +255,9 @@
     </div>
     <a href="https://clientportal.zandahealth.com/clientportal/morethancounselling" target="_blank" class="btn-primary" style="margin-top:1rem;">Book via Client Portal</a>
   </div>
-  <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+  <form class="contact-form reveal" name="enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+    <input type="hidden" name="form-name" value="enquiry"/>
+    <p style="display:none"><input name="bot-field"/></p>
     <div class="form-row">
       <div class="form-group">
         <label>First Name</label>
@@ -370,10 +372,20 @@
 
   function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('button');
-    btn.textContent = 'Enquiry Sent ';
-    btn.style.background = 'var(--sage)';
-    setTimeout(() => { btn.textContent = 'Send My Enquiry'; btn.style.background = ''; }, 3000);
+    const form = e.target;
+    const data = new FormData(form);
+    fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
+      .then(() => {
+        form.style.display = 'none';
+        const ty = document.getElementById('form-thankyou');
+        if (ty) ty.style.display = 'block';
+      })
+      .catch(() => {
+        form.style.display = 'none';
+        const ty = document.getElementById('form-thankyou');
+        if (ty) ty.style.display = 'block';
+      });
+  }, 3000);
   }
 
   // Highlight active nav link
