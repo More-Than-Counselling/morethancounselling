@@ -331,7 +331,7 @@
       <p class="section-body">Sessions are available in-person and online... Reach out below and Fionna will be in touch within 24 hours to discuss how she can support you.</p>
       <p class="section-body" style="margin-top:1rem;">All enquiries are completely confidential... there's no pressure, no commitment... just a conversation.</p>
     </div>
-    <form id="contact-form" class="contact-form" name="enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+    <form id="contact-form" class="contact-form" name="enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="submitForm(event)">
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
@@ -387,69 +387,36 @@
 
 
 <script>
-  function toggleMenu() {
-    const menu = document.getElementById('nav-menu');
-    menu.classList.toggle('open');
-  }
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.08 });
-  reveals.forEach(r => observer.observe(r));
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
-      .then(() => {
-        form.style.display = 'none';
-        const ty = document.getElementById('form-thankyou');
-        if (ty) ty.style.display = 'block';
-      })
-      .catch(() => {
-        form.style.display = 'none';
-        const ty = document.getElementById('form-thankyou');
-        if (ty) ty.style.display = 'block';
-      });
-
-  // Highlight active nav link
-  const links = document.querySelectorAll('.nav-link');
-  links.forEach(l => {
-    if (l.href === window.location.href) l.classList.add('active');
-  });
-</script>
-
-
-  <script>
     function toggleMenu() {
       document.getElementById('nav-menu').classList.toggle('open');
     }
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    var reveals = document.querySelectorAll('.reveal');
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08 });
-    reveals.forEach(r => observer.observe(r));
-    function handleSubmit(e) {
+    reveals.forEach(function(r) { obs.observe(r); });
+    var links = document.querySelectorAll('.nav-link');
+    links.forEach(function(l) { if (l.href === window.location.href) l.classList.add('active'); });
+    function submitForm(e) {
       e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
-      fetch('/', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        body: new URLSearchParams(data).toString()
-      }).then(function() {
+      var form = e.target;
+      var data = new FormData(form);
+      var body = new URLSearchParams(data).toString();
+      var req = new XMLHttpRequest();
+      req.open('POST', '/');
+      req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      req.onload = function() {
         form.style.display = 'none';
         var ty = document.getElementById('form-thankyou');
         if (ty) ty.style.display = 'block';
-      }).catch(function() {
+      };
+      req.onerror = function() {
         form.style.display = 'none';
         var ty = document.getElementById('form-thankyou');
         if (ty) ty.style.display = 'block';
-      });
+      };
+      req.send(body);
     }
-    const links = document.querySelectorAll('.nav-link');
-    links.forEach(l => { if (l.href === window.location.href) l.classList.add('active'); });
   </script>
 </body>
 </html>
