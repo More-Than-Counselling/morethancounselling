@@ -399,10 +399,20 @@
 
   function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('button');
-    btn.textContent = 'Enquiry Sent ';
-    btn.style.background = 'var(--sage)';
-    setTimeout(() => { btn.textContent = 'Send My Enquiry'; btn.style.background = ''; }, 3000);
+    const form = e.target;
+    const data = new FormData(form);
+    fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
+      .then(() => {
+        form.style.display = 'none';
+        const ty = document.getElementById('form-thankyou');
+        if (ty) ty.style.display = 'block';
+      })
+      .catch(() => {
+        form.style.display = 'none';
+        const ty = document.getElementById('form-thankyou');
+        if (ty) ty.style.display = 'block';
+      });
+  }, 3000);
   }
 
   // Highlight active nav link
