@@ -331,20 +331,20 @@
       <p class="section-body">Sessions are available in-person and online... Reach out below and Fionna will be in touch within 24 hours to discuss how she can support you.</p>
       <p class="section-body" style="margin-top:1rem;">All enquiries are completely confidential... there's no pressure, no commitment... just a conversation.</p>
     </div>
-    <form id="contact-form" class="contact-form" onsubmit="handleSubmit(event)">
+    <form id="contact-form" class="contact-form" name="enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
-          <input type="text" placeholder="Your first name" />
+          <input type="text" name="first-name" placeholder="Your first name" />
         </div>
         <div class="form-group">
           <label>Last Name</label>
-          <input type="text" placeholder="Your last name" />
+          <input type="text" name="last-name" placeholder="Your last name" />
         </div>
       </div>
       <div class="form-group">
         <label>Email Address</label>
-        <input type="email" placeholder="your@email.com" />
+        <input type="email" name="email" placeholder="your@email.com" />
       </div>
       <div class="form-group">
         <label>I'm interested in</label>
@@ -358,7 +358,7 @@
       </div>
       <div class="form-group">
         <label>Tell me a little about what you're navigating</label>
-        <textarea placeholder="There's no pressure to share everything... even a few words helps me prepare for our conversation."></textarea>
+        <textarea name="message" placeholder="There's no pressure to share everything... even a few words helps me prepare for our conversation."></textarea>
       </div>
       <button type="submit" class="btn-primary" style="width:100%;border:none;cursor:pointer;">Send My Enquiry</button>
       <p class="form-note">Or book directly via <a href="https://clientportal.zandahealth.com/clientportal/morethancounselling" target="_blank">Client Portal</a> &middot; All enquiries are confidential</p>
