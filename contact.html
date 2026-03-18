@@ -368,6 +368,7 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.08 });
   reveals.forEach(r => observer.observe(r));
+  setTimeout(()=>reveals.forEach(r=>r.classList.add("visible")),800);
 
   function handleSubmit(e) {
     e.preventDefault();
