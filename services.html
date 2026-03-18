@@ -11,14 +11,14 @@
   :root {
     --linen: #EBE4DA;
     --blush: #E8B4A8;
-    --terracotta: #C97B6B;
+    --terracotta: #A85A48;
     --dusty-blue: #8BAAB8;
     --sage: #7A9BAA;
     --forest: #3A6B7A;
     --deep: #2A4A5E;
     --warm-white: #F2EDE6;
     --text: #3A3530;
-    --text-light: #7A7370;
+    --text-light: #4A4340;
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'Jost', sans-serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
@@ -71,18 +71,18 @@
 
   /* TYPOGRAPHY */
   .section-label {
-    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase;
     color: var(--terracotta); margin-bottom: 0.9rem; display: block;
   }
   .section-title {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
     font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1.12;
     color: var(--deep); margin-bottom: 1.3rem;
   }
   .section-title em { font-style: italic; color: var(--forest); }
   .section-body {
     font-size: 1rem; line-height: 1.85; color: var(--text-light);
-    font-weight: 300; max-width: 560px;
+    font-weight: 400; max-width: 560px;
   }
 
   /* CREDENTIALS */
@@ -91,8 +91,8 @@
     display: flex; gap: 2.5rem; align-items: center; justify-content: center; flex-wrap: wrap;
   }
   .credentials span {
-    color: rgba(255,255,255,0.78); font-size: 0.7rem;
-    letter-spacing: 0.2em; text-transform: uppercase; font-weight: 300;
+    color: rgba(255,255,255,0.78); font-size: 0.85rem;
+    letter-spacing: 0.2em; text-transform: uppercase; font-weight: 400;
   }
   .credentials span::before { content: ' '; color: var(--blush); }
 
@@ -114,7 +114,7 @@
     color: var(--terracotta); margin-bottom: 0.8rem; display: block;
   }
   .page-hero-content h1 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 300;
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
     font-size: clamp(3rem, 6vw, 5rem); line-height: 1.05; color: var(--deep);
   }
   .page-hero-content h1 em { font-style: italic; color: var(--forest); }
@@ -130,14 +130,14 @@
   .contact-form { background: var(--warm-white); padding: 3rem; border-radius: 2px; }
   .form-group { margin-bottom: 1.1rem; }
   .form-group label {
-    display: block; font-size: 0.7rem; letter-spacing: 0.15em;
+    display: block; font-size: 0.85rem; letter-spacing: 0.15em;
     text-transform: uppercase; color: var(--forest); margin-bottom: 0.4rem;
   }
   .form-group input, .form-group textarea, .form-group select {
     width: 100%; padding: 0.85rem 1rem;
     border: 1px solid rgba(74,107,90,0.2); border-radius: 2px;
     background: var(--linen); color: var(--text);
-    font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 300;
+    font-family: 'Jost', sans-serif; font-size: 0.92rem; font-weight: 400;
     transition: border-color 0.3s; outline: none;
   }
   .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--sage); }
@@ -200,7 +200,7 @@
   .service-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; color: rgba(74,107,90,0.1); line-height: 1; margin-bottom: 1.2rem; }
   .service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
   .service-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.6rem; color: var(--deep); margin-bottom: 1rem; }
-  .service-card p { font-size: 0.92rem; line-height: 1.8; color: var(--text-light); font-weight: 300; }
+  .service-card p { font-size: 0.92rem; line-height: 1.8; color: var(--text-light); font-weight: 400; }
   @media (max-width: 860px) {
     .services-intro { padding: 4rem 2rem 2rem; }
     .services-grid { margin: 0 0 3rem; grid-template-columns: 1fr; }
