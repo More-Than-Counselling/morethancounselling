@@ -1,53 +1,123 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>NDIS Services | More Than Counselling</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}:root{--linen:#EBE4DA;--blush:#E8B4A8;--terracotta:#A85A48;--sage:#7A9BAA;--forest:#3A6B7A;--deep:#2A4A5E;--warm-white:#F2EDE6;--text:#3A3530;--text-light:#4A4340;}html{scroll-behavior:smooth;}body{font-family:'Jost',sans-serif;background:var(--warm-white);color:var(--text);overflow-x:hidden;font-weight:400;}nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(242,237,230,0.97);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.15);border-bottom:1px solid rgba(58,90,105,0.15);}nav img.nav-logo{height:64px;width:auto;}nav ul{display:flex;gap:2rem;list-style:none;align-items:center;}nav ul a{font-family:'Jost',sans-serif;font-weight:400;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--deep);text-decoration:none;transition:color 0.3s;}nav ul a:hover,nav ul a.active{color:var(--blush);}.nav-btn{background:var(--terracotta);color:white!important;padding:0.55rem 1.3rem;border-radius:2px;font-size:0.75rem!important;letter-spacing:0.15em!important;}.hamburger{display:none;background:none;border:none;font-size:1.5rem;color:var(--deep);cursor:pointer;}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cancellation & Refund Policy | More Than Counselling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --linen:#EBE4DA;
+      --blush:#E8B4A8;
+      --terracotta:#A85A48;
+      --sage:#7A9BAA;
+      --forest:#3A6B7A;
+      --deep:#2A4A5E;
+      --warm-white:#F2EDE6;
+      --text:#3A3530;
+      --text-light:#4A4340;
+      --card:#faf8f5;
+      --text-mid:#4a5a5a;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--warm-white); font-family: 'Jost', sans-serif; color: var(--text); overflow-x: hidden; font-weight: 400; }
 
-/* ── CLEARANCE BADGE ── */
-.clearance-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(58,90,105,0.08);border:1px solid rgba(58,90,105,0.2);border-radius:40px;padding:0.45rem 1.1rem;font-size:0.78rem;letter-spacing:0.06em;color:var(--forest);margin-bottom:1.8rem;}
-.clearance-badge::before{content:"✓";font-weight:600;color:var(--forest);}
+    /* ── NAV ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 4rem; background: rgba(242,237,230,0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(0,0,0,0.15); border-bottom: 1px solid rgba(58,90,105,0.15); }
+    nav img.nav-logo { height: 64px; width: auto; }
+    nav ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    nav ul a { font-family: 'Jost', sans-serif; font-weight: 400; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--deep); text-decoration: none; transition: color 0.3s; }
+    nav ul a:hover, nav ul a.active { color: var(--blush); }
+    .nav-btn { background: var(--terracotta); color: white!important; padding: 0.55rem 1.3rem; border-radius: 2px; font-size: 0.75rem!important; letter-spacing: 0.15em!important; }
+    .hamburger { display: none; background: none; border: none; font-size: 1.5rem; color: var(--deep); cursor: pointer; }
 
-/* ── PLAN TYPE BANNER ── */
-.plan-banner{background:var(--terracotta);color:white;text-align:center;padding:0.75rem 1.5rem;font-size:0.78rem;letter-spacing:0.1em;font-weight:400;text-transform:uppercase;}
+    /* ── HERO ── */
+    .hero { padding: 150px 4rem 60px; max-width: 920px; margin: 0 auto; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-light); font-weight: 400; margin-bottom: 1.2rem; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.8rem, 6vw, 4.5rem); color: var(--deep); line-height: 1.1; margin-bottom: 1.2rem; }
+    .hero h1 em { color: var(--forest); font-style: italic; }
+    .hero .lead { font-size: 1.05rem; line-height: 1.85; color: var(--text-light); max-width: 580px; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); text-decoration: none; margin-bottom: 1.5rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--deep); }
 
-.reveal{opacity:1;transform:none;transition:opacity 0.7s ease,transform 0.7s ease;}.reveal.visible{opacity:1;transform:none;}.eyebrow{font-size:0.8rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-light);font-weight:400;margin-bottom:1.2rem;}.section-label{font-size:0.85rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);margin-bottom:0.8rem;}.hero{padding:150px 4rem 60px;max-width:920px;margin:0 auto;}.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.8rem,6vw,4.5rem);color:var(--deep);line-height:1.1;margin-bottom:1.2rem;}.hero h1 em{color:var(--forest);font-style:italic;}.hero .lead{font-size:1.05rem;line-height:1.85;color:var(--text-light);max-width:680px;margin-bottom:1.8rem;}.back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);text-decoration:none;margin-bottom:1.5rem;transition:color 0.2s;}.back-link:hover{color:var(--deep);}
+    /* ── DIVIDER ── */
+    .divider { height: 1px; background: rgba(58,90,105,0.1); max-width: 920px; margin: 0 auto; }
 
-/* ── SECTIONS ── */
-.section{max-width:920px;margin:0 auto;padding:4rem;}.section h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--deep);line-height:1.2;margin-bottom:1.2rem;}.section p{font-size:1.05rem;line-height:1.85;color:var(--text-light);}.section p+p{margin-top:1rem;}.divider{height:1px;background:rgba(58,90,105,0.1);max-width:920px;margin:0 auto;}
+    /* ── SECTIONS ── */
+    .section { max-width: 920px; margin: 0 auto; padding: 4rem; }
+    .section h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: var(--deep); line-height: 1.2; margin-bottom: 1.2rem; }
+    .section-label { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.8rem; }
+    .section p { font-size: 1rem; line-height: 1.85; color: var(--text-light); }
+    .section p + p { margin-top: 1rem; }
 
-/* ── SERVICE CARDS ── */
-.service-card{background:white;border:0.5px solid rgba(58,90,105,0.15);border-radius:4px;padding:2.4rem 2.8rem;margin-top:2rem;position:relative;}
-.service-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--sage);border-radius:4px 0 0 4px;}
-.service-card.terracotta-card::before{background:var(--terracotta);}
-.service-card .funding-tag{display:inline-block;font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--forest);background:rgba(58,107,122,0.08);padding:0.3rem 0.8rem;border-radius:2px;margin-bottom:1rem;}
-.service-card .funding-tag.warm{color:var(--terracotta);background:rgba(168,90,72,0.08);}
-.service-card h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--deep);margin-bottom:0.4rem;}
-.service-card .funding-line{font-size:0.78rem;letter-spacing:0.06em;color:var(--text-light);font-style:italic;margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(58,90,105,0.1);}
-.service-card p{font-size:1rem;line-height:1.85;color:var(--text-light);}
-.service-card p+p{margin-top:0.9rem;}
+    /* ── NOTICE BLOCKS ── */
+    .notice-stack { display: flex; flex-direction: column; gap: 2px; margin-top: 1.5rem; }
+    .notice-block { display: grid; grid-template-columns: 140px 1fr; background: var(--linen); overflow: hidden; border-radius: 0; }
+    .notice-block:first-child { border-radius: 4px 4px 0 0; }
+    .notice-block:last-child { border-radius: 0 0 4px 4px; }
+    .notice-badge { background: var(--forest); color: white; padding: 1.5rem 1.25rem; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.5; }
+    .notice-block.amber .notice-badge { background: var(--terracotta); }
+    .notice-block.red .notice-badge { background: #7a3a2e; }
+    .notice-body { padding: 1.4rem 1.75rem; }
+    .notice-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: var(--deep); margin-bottom: 0.35rem; }
+    .notice-desc { font-size: 0.9rem; color: var(--text-light); font-weight: 300; line-height: 1.75; }
 
-/* ── ARROW LIST ── */
-.arrow-list{list-style:none;margin:1.2rem 0 1.4rem;}
-.arrow-list li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.97rem;color:var(--text-light);line-height:1.7;padding:0.5rem 0;border-bottom:1px solid rgba(58,90,105,0.07);}
-.arrow-list li:last-child{border-bottom:none;}
-.arrow-list li::before{content:'→';color:var(--terracotta);flex-shrink:0;margin-top:1px;}
+    /* ── NOTE BOX ── */
+    .note-box { background: rgba(58,107,122,0.06); border-left: 3px solid var(--sage); border-radius: 0 4px 4px 0; padding: 1.2rem 1.8rem; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-light); line-height: 1.8; }
+    .note-box strong { color: var(--deep); font-weight: 500; }
 
-/* ── DETAIL PILLS ── */
-.detail-pills{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid rgba(58,90,105,0.1);}
-.pill{display:inline-flex;align-items:center;gap:0.4rem;background:var(--warm-white);border:1px solid rgba(58,90,105,0.15);border-radius:40px;padding:0.35rem 0.9rem;font-size:0.75rem;color:var(--text-light);letter-spacing:0.03em;}
-.pill::before{content:'✓';color:var(--forest);font-size:0.72rem;}
+    /* ── BULLET LIST ── */
+    .policy-list { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .policy-list li { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 1rem; color: var(--text-light); line-height: 1.75; }
+    .policy-list li::before { content: '→'; color: var(--terracotta); flex-shrink: 0; margin-top: 1px; }
 
-/* ── TEXT LINK ── */
-.text-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--forest);font-size:0.88rem;letter-spacing:0.04em;text-decoration:none;border-bottom:1px solid rgba(58,107,122,0.25);padding-bottom:1px;transition:color 0.2s,border-color 0.2s;}
-.text-link:hover{color:var(--terracotta);border-color:rgba(168,90,72,0.3);}
+    /* ── TEAL CTA CARD ── */
+    .teal-card { background: var(--deep); color: white; border-radius: 4px; padding: 3.5rem 4rem; margin: 0 auto; max-width: 920px; }
+    .teal-card h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: white; margin-bottom: 1rem; }
+    .teal-card h2 em { font-style: italic; color: var(--blush); }
+    .teal-card p { font-size: 1rem; line-height: 1.85; color: rgba(255,255,255,0.8); }
+    .teal-card p + p { margin-top: 0.9rem; }
 
-/* ── NOTICE BOX ── */
-.notice-box{background:rgba(58,107,122,0.06);border-left:3px solid var(--sage);border-radius:0 4px 4px 0;padding:1.2rem 1.8rem;margin-top:2.5rem;font-size:0.9rem;color:var(--text-light);line-height:1.8;}
-.notice-box strong{color:var(--deep);font-weight:500;}
+    /* ── CONTACT LINKS ── */
+    .contact-options { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+    .contact-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 40px; padding: 0.5rem 1.2rem; font-size: 0.82rem; color: white; text-decoration: none; letter-spacing: 0.04em; transition: background 0.2s; }
+    .contact-pill:hover { background: rgba(255,255,255,0.18); }
+    .contact-pill::before { content: '→'; color: var(--blush); }
 
-/* ── CTA BANNER ── */
-.teal-banner{background:var(--deep);color:white;padding:5rem 4rem;text-align:center;}.teal-banner h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;}.teal-banner h2 em{color:var(--blush);font-style:italic;}.teal-banner p{font-size:1.05rem;line-height:1.7;opacity:0.85;max-width:600px;margin:0 auto 0.6rem;}.teal-banner .cta-note{font-size:0.82rem;opacity:0.55;font-style:italic;margin-bottom:2rem;}.btn-primary{display:inline-block;background:var(--terracotta);color:white;padding:0.85rem 2.2rem;font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.3s;}.btn-primary:hover{background:var(--forest);}.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,0.5);color:white;padding:0.85rem 2.2rem;font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;border-radius:2px;margin-left:1rem;transition:background 0.3s;}.btn-ghost:hover{background:rgba(255,255,255,0.1);}
+    /* ── TEXT LINK ── */
+    .text-link { color: var(--forest); text-decoration: none; border-bottom: 1px solid rgba(58,107,122,0.25); padding-bottom: 1px; transition: color 0.2s; font-weight: 400; }
+    .text-link:hover { color: var(--terracotta); }
 
-footer{background:var(--deep);color:white;padding:3rem 4rem 2rem;}.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:3rem;justify-content:space-between;}.footer-brand p{font-size:0.9rem;opacity:0.7;margin-top:0.5rem;max-width:280px;line-height:1.6;}.footer-links h4{font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.5;margin-bottom:1rem;font-weight:400;}.footer-links ul{list-style:none;}.footer-links li+li{margin-top:0.5rem;}.footer-links a{color:white;text-decoration:none;font-size:0.9rem;opacity:0.8;}.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);font-size:0.8rem;opacity:0.5;}
+    /* ── REVEAL ── */
+    .reveal { opacity: 1; transform: none; transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
 
-@media(max-width:768px){nav{padding:1rem 1.5rem;}.hamburger{display:block;}nav ul{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--warm-white);padding:1.5rem;gap:1rem;box-shadow:0 4px 20px rgba(0,0,0,0.1);}nav ul.open{display:flex;}.hero,.section{padding-left:1.5rem;padding-right:1.5rem;}.teal-banner{padding:3rem 1.5rem;}footer{padding:2rem 1.5rem;}.service-card{padding:1.8rem 1.6rem;}.btn-ghost{margin-left:0;margin-top:0.8rem;display:block;text-align:center;}}</style></head><body>
+    /* ── FOOTER ── */
+    footer { background: var(--deep); color: white; padding: 3rem 4rem 2rem; margin-top: 5rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 3rem; justify-content: space-between; align-items: flex-start; }
+    .footer-brand { display: flex; align-items: center; gap: 1.2rem; } .footer-brand-text p { font-size: 0.9rem; opacity: 0.7; max-width: 220px; line-height: 1.6; }
+    .footer-links h4 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; margin-bottom: 1rem; font-weight: 400; }
+    .footer-links { display: flex; flex-direction: column; } .footer-links ul { list-style: none; }
+    .footer-links li + li { margin-top: 0.5rem; }
+    .footer-links a { color: white; text-decoration: none; font-size: 0.9rem; opacity: 0.8; }
+    .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.5; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .hamburger { display: block; }
+      nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--warm-white); padding: 1.5rem; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+      nav ul.open { display: flex; }
+      .hero, .section { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .teal-card { padding: 2.5rem 1.5rem; margin: 0 1.5rem; }
+      footer { padding: 2rem 1.5rem; }
+      .notice-block { grid-template-columns: 1fr; }
+      .notice-badge { padding: 0.9rem 1.25rem; justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
 
 <nav>
   <a href="index.html"><img src="https://morethancounselling.com/assets/mtc-logo.png" alt="More Than Counselling" class="nav-logo" onerror="this.style.display='none'"/></a>
@@ -55,7 +125,7 @@ footer{background:var(--deep);color:white;padding:3rem 4rem 2rem;}.footer-inner{
   <ul id="nav-menu">
     <li><a href="index.html" class="nav-link">Home</a></li>
     <li><a href="about.html" class="nav-link">About</a></li>
-    <li><a href="services.html" class="nav-link active">Services</a></li>
+    <li><a href="services.html" class="nav-link">Services</a></li>
     <li><a href="yoga.html" class="nav-link">Yoga &amp; Movement</a></li>
     <li><a href="https://clientportal.zandahealth.com/clientportal/morethancounselling" target="_blank" class="nav-btn">Book a Session</a></li>
   </ul>
@@ -65,127 +135,105 @@ footer{background:var(--deep);color:white;padding:3rem 4rem 2rem;}.footer-inner{
 
   <!-- HERO -->
   <div class="hero">
-    <a href="services.html" class="back-link reveal">&larr; All Services</a>
-    <p class="eyebrow reveal">NDIS Services</p>
-    <h1 class="reveal">Support that sees<br><em>the whole person</em></h1>
-    <p class="lead reveal">More Than Counselling supports NDIS participants to build capacity, improve wellbeing, and move through life with greater confidence and independence. I work with self-managed and plan-managed participants across three service areas &hellip; bringing a qualified, person-centred approach to every aspect of my work.</p>
-    <div class="clearance-badge reveal">NDIS Worker Screening Clearance held</div>
+    <a href="index.html" class="back-link reveal">&larr; Home</a>
+    <p class="eyebrow reveal">The Formal Stuff</p>
+    <h1 class="reveal">Cancellation &amp;<br><em>Refund Policy</em></h1>
+    <p class="lead reveal">Life happens. Here&rsquo;s everything you need to know about rescheduling, cancelling, and what to do when plans change.</p>
   </div>
-
-  <!-- PLAN TYPE BANNER -->
-  <div class="plan-banner">Accepting self-managed &amp; plan-managed participants</div>
 
   <div class="divider"></div>
 
-  <!-- SERVICE 1: COUNSELLING -->
+  <!-- CANCELLATION POLICY -->
   <div class="section reveal">
     <p class="section-label">01</p>
-    <h2>Therapeutic Counselling</h2>
-    <div class="service-card">
-      <span class="funding-tag">Capacity Building</span>
-      <p class="funding-line">Improved Daily Living</p>
-      <p>Living with a disability or chronic condition can bring unexpected emotional challenges &hellip; grief, frustration, identity shifts, and the weight of adjusting to a life that may look very different than you&rsquo;d planned.</p>
-      <p>Therapeutic counselling provides a supported space to process those experiences, develop coping strategies, and build the psychological skills and resilience to navigate daily life with greater clarity and confidence.</p>
-      <p>Sessions are integrative, trauma-informed, and tailored to your individual goals and NDIS plan.</p>
-      <div class="detail-pills">
-        <span class="pill">In-person &amp; online</span>
-        <span class="pill">Australia-wide</span>
-        <span class="pill">Self &amp; plan-managed</span>
-        <span class="pill">CB: Improved Daily Living</span>
+    <h2>Cancellation Policy</h2>
+    <p>When you confirm a session, that time is reserved exclusively for you. Please give as much notice as possible if you need to cancel or reschedule so that Fionna has the opportunity to offer your spot to someone else.</p>
+    <p>Cancellations and rescheduling requests made with less than 48 hours notice may attract the full session fee. If Fionna is able to fill the spot, the fee will be waived.</p>
+
+    <div class="notice-stack">
+      <div class="notice-block">
+        <div class="notice-badge">48+ hours notice</div>
+        <div class="notice-body">
+          <div class="notice-title">No charge</div>
+          <div class="notice-desc">Cancellations or rescheduling requests made more than 48 hours before your session will not incur any fee. You are welcome to rebook at your convenience.</div>
+        </div>
       </div>
-      <div style="margin-top:1.4rem;">
-        <a href="service-counselling.html" class="text-link">Learn more about counselling at More Than Counselling &rarr;</a>
+      <div class="notice-block amber">
+        <div class="notice-badge">Under 48 hours notice</div>
+        <div class="notice-body">
+          <div class="notice-title">Full session fee may apply</div>
+          <div class="notice-desc">Cancellations or rescheduling with less than 48 hours notice may attract the full session fee. If Fionna is able to fill the spot, the fee will be waived.</div>
+        </div>
       </div>
+      <div class="notice-block red">
+        <div class="notice-badge">No show</div>
+        <div class="notice-body">
+          <div class="notice-title">Full session fee</div>
+          <div class="notice-desc">If you do not attend your session without any prior contact, the full session fee will apply.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Running late?</strong> Please reach out as soon as possible. Sessions will run for the remaining available time and will be charged at the full rate.
     </div>
   </div>
 
   <div class="divider"></div>
 
-  <!-- SERVICE 2: MOVEMENT -->
+  <!-- LATE CANCELLATION FEES -->
   <div class="section reveal">
     <p class="section-label">02</p>
-    <h2>Movement-Based Capacity Building</h2>
-    <div class="service-card terracotta-card">
-      <span class="funding-tag warm">Capacity Building</span>
-      <p class="funding-line">Improved Health &amp; Wellbeing &nbsp;/&nbsp; Improved Daily Living</p>
-      <p>For participants with physical restrictions or mobility challenges, I offer therapeutic movement support designed to help you safely increase your functional capacity, body confidence, and independence in daily life.</p>
-      <p>As a qualified counsellor and certified yoga teacher with access to specialist movement equipment, I draw on evidence-informed therapeutic movement principles to support you in:</p>
-      <ul class="arrow-list">
-        <li>Improving balance, coordination, and safe body movement</li>
-        <li>Building strength and mobility to support everyday activities</li>
-        <li>Developing body awareness and confidence in physical function</li>
-        <li>Reducing barriers to participation in daily and community life</li>
-      </ul>
-      <p>This support is delivered at a pace that respects your physical needs and comfort &hellip; and is always grounded in a trauma-informed, therapeutic framework that considers the whole person, not just the physical.</p>
-      <div class="detail-pills">
-        <span class="pill">In-person</span>
-        <span class="pill">Self &amp; plan-managed</span>
-        <span class="pill">CB: Improved Health &amp; Wellbeing</span>
-        <span class="pill">CB: Improved Daily Living</span>
-      </div>
-    </div>
+    <h2>Late Cancellation Fees</h2>
+    <p>Late cancellation and no show fees reflect the time that has been reserved exclusively for you and help sustain the practice. These fees are not covered by Medicare, private health insurance, or NDIS funding and will need to be paid directly.</p>
+    <p>If a pattern of late cancellations or missed appointments continues, Fionna will reach out to have an honest and supportive conversation about how to make the arrangement work for you. For NDIS participants, this will be approached collaboratively to assess the best path forward and ensure ongoing engagement that genuinely serves your goals.</p>
   </div>
 
   <div class="divider"></div>
 
-  <!-- SERVICE 3: SUPPORT WORKER -->
+  <!-- HOW TO CANCEL -->
   <div class="section reveal">
     <p class="section-label">03</p>
-    <h2>Support Worker Services</h2>
-    <div class="service-card">
-      <span class="funding-tag">Core Supports</span>
-      <p class="funding-line">Assistance with Daily Life</p>
-      <p>I offer personalised support worker services for participants who need practical, compassionate assistance with daily life activities.</p>
-      <p>As a qualified therapeutic practitioner with First Aid certification and a current NDIS Worker Screening Clearance, I bring a considered, person-centred approach to support work &hellip; one that goes beyond task assistance to help you build confidence, independence, and capacity in your everyday routines.</p>
-      <p>Support may include assistance with daily activities, community access, and working toward the goals in your NDIS plan in a way that feels respectful and meaningful to you.</p>
-      <div class="detail-pills">
-        <span class="pill">In-person</span>
-        <span class="pill">Self &amp; plan-managed</span>
-        <span class="pill">Core Supports: Daily Life</span>
-        <span class="pill">NDIS Clearance held</span>
-      </div>
-    </div>
-
-    <!-- NOTICE BOX -->
-    <div class="notice-box">
-      <strong>Please note:</strong> Your NDIS plan will need to include the relevant funding category for the support you&rsquo;re seeking. If you&rsquo;re unsure, your support coordinator or plan manager can help you confirm this before we get started.
-    </div>
+    <h2>How to Cancel or Reschedule</h2>
+    <p>To cancel or reschedule your appointment, please contact Fionna directly via:</p>
+    <ul class="policy-list">
+      <li>Email: <a href="mailto:admin@morethancounselling.com" class="text-link">admin@morethancounselling.com</a></li>
+      <li>Client Portal: <a href="https://clientportal.zandahealth.com/clientportal/morethancounselling" target="_blank" class="text-link">Book or manage via the client portal &rarr;</a></li>
+    </ul>
+    <p style="margin-top:1rem;">Rescheduling is subject to availability. Where possible, Fionna will do her best to find a time that works for you within the same week.</p>
   </div>
 
   <div class="divider"></div>
 
-  <!-- NDIS INFORMATION -->
+  <!-- REFUNDS -->
   <div class="section reveal">
-    <p class="section-label">NDIS Information</p>
-    <h2>How NDIS funding works</h2>
-    <p>Services are billed under the relevant support categories per current NDIS Pricing Arrangements and Price Limits. All invoices are provided promptly for self-managed and plan-managed participants.</p>
-    <div style="background:var(--linen);border-radius:4px;padding:2rem 2.4rem;margin-top:1.5rem;">
-      <div style="display:flex;flex-wrap:wrap;gap:2.5rem;">
-        <div>
-          <p style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--deep);margin-bottom:0.4rem;">Support Categories</p>
-          <p style="font-size:0.95rem;color:var(--text-light);line-height:1.6;">Improved Daily Living<br>Improved Health &amp; Wellbeing<br>Core Supports: Assistance with Daily Life</p>
-        </div>
-        <div>
-          <p style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--deep);margin-bottom:0.4rem;">Plan Management</p>
-          <p style="font-size:0.95rem;color:var(--text-light);line-height:1.6;">Self-managed<br>Plan-managed</p>
-        </div>
-        <div>
-          <p style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--deep);margin-bottom:0.4rem;">Locations</p>
-          <p style="font-size:0.95rem;color:var(--text-light);line-height:1.6;">In-person (Hervey Bay)<br>Online &mdash; Australia-wide</p>
-        </div>
-      </div>
-    </div>
+    <p class="section-label">04</p>
+    <h2>Refunds</h2>
+    <p>If you have prepaid for a session package or block of sessions and wish to discontinue, refunds will be issued as follows:</p>
+    <ul class="policy-list">
+      <li>Unused sessions will be refunded in full, less any applicable cancellation fees for appointments already missed</li>
+      <li>Refunds will be processed within 7 to 10 business days via the original payment method</li>
+      <li>No refund will be issued for sessions already attended</li>
+    </ul>
+    <p style="margin-top:1rem;">To request a refund, please contact Fionna directly with your name, session dates, and reason for the request. All requests will be responded to within 2 business days.</p>
   </div>
 
   <div class="divider"></div>
 
-  <!-- CTA -->
-  <section class="teal-banner reveal">
-    <h2>Ready to get <em>started?</em></h2>
-    <p>If you&rsquo;re a self-managed or plan-managed NDIS participant and would like to explore how More Than Counselling can support your goals, I&rsquo;d love to hear from you.</p>
-    <p class="cta-note">Please complete the enquiry form and I&rsquo;ll be in touch to discuss how I can best support you.</p>
-    <a href="contact.html" class="btn-primary">Submit a Referral Enquiry</a>
-  </section>
+  <!-- EMERGENCIES -->
+  <div class="section reveal" style="padding-bottom: 5rem;">
+    <p class="section-label">05</p>
+    <h2>Emergencies &amp; Extenuating Circumstances</h2>
+    <div class="teal-card">
+      <h2>Life doesn&rsquo;t always <em>give notice</em></h2>
+      <p>Genuine emergencies happen and Fionna understands that. If you need to cancel at short notice due to a medical emergency, bereavement, or other serious unforeseen circumstance, please reach out as soon as you are able.</p>
+      <p>These situations are handled on a case by case basis with compassion and discretion. Financial concerns should never be a barrier to accessing support &hellip; please don&rsquo;t hesitate to have an honest conversation.</p>
+      <div class="contact-options">
+        <a href="mailto:admin@morethancounselling.com" class="contact-pill">admin@morethancounselling.com</a>
+        <a href="contact.html" class="contact-pill">Contact form</a>
+      </div>
+    </div>
+  </div>
 
 </main>
 
@@ -230,6 +278,11 @@ footer{background:var(--deep);color:white;padding:3rem 4rem 2rem;}.footer-inner{
   setTimeout(function() {
     document.querySelectorAll(".reveal").forEach(function(x) { x.classList.add("visible"); });
   }, 800);
+
+  document.getElementById('nav-menu').querySelectorAll('a').forEach(a => {
+    if (a.href === window.location.href) a.classList.add('active');
+  });
 </script>
 
-</body></html>
+</body>
+</html>

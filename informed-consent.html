@@ -1,53 +1,104 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>NDIS Services | More Than Counselling</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}:root{--linen:#EBE4DA;--blush:#E8B4A8;--terracotta:#A85A48;--sage:#7A9BAA;--forest:#3A6B7A;--deep:#2A4A5E;--warm-white:#F2EDE6;--text:#3A3530;--text-light:#4A4340;}html{scroll-behavior:smooth;}body{font-family:'Jost',sans-serif;background:var(--warm-white);color:var(--text);overflow-x:hidden;font-weight:400;}nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(242,237,230,0.97);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,0.15);border-bottom:1px solid rgba(58,90,105,0.15);}nav img.nav-logo{height:64px;width:auto;}nav ul{display:flex;gap:2rem;list-style:none;align-items:center;}nav ul a{font-family:'Jost',sans-serif;font-weight:400;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--deep);text-decoration:none;transition:color 0.3s;}nav ul a:hover,nav ul a.active{color:var(--blush);}.nav-btn{background:var(--terracotta);color:white!important;padding:0.55rem 1.3rem;border-radius:2px;font-size:0.75rem!important;letter-spacing:0.15em!important;}.hamburger{display:none;background:none;border:none;font-size:1.5rem;color:var(--deep);cursor:pointer;}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informed Consent | More Than Counselling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --linen:#EBE4DA;
+      --blush:#E8B4A8;
+      --terracotta:#A85A48;
+      --sage:#7A9BAA;
+      --forest:#3A6B7A;
+      --deep:#2A4A5E;
+      --warm-white:#F2EDE6;
+      --text:#3A3530;
+      --text-light:#4A4340;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--warm-white); font-family: 'Jost', sans-serif; color: var(--text); overflow-x: hidden; font-weight: 400; }
 
-/* ── CLEARANCE BADGE ── */
-.clearance-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(58,90,105,0.08);border:1px solid rgba(58,90,105,0.2);border-radius:40px;padding:0.45rem 1.1rem;font-size:0.78rem;letter-spacing:0.06em;color:var(--forest);margin-bottom:1.8rem;}
-.clearance-badge::before{content:"✓";font-weight:600;color:var(--forest);}
+    /* ── NAV ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 4rem; background: rgba(242,237,230,0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(0,0,0,0.15); border-bottom: 1px solid rgba(58,90,105,0.15); }
+    nav img.nav-logo { height: 64px; width: auto; }
+    nav ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    nav ul a { font-family: 'Jost', sans-serif; font-weight: 400; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--deep); text-decoration: none; transition: color 0.3s; }
+    nav ul a:hover, nav ul a.active { color: var(--blush); }
+    .nav-btn { background: var(--terracotta); color: white!important; padding: 0.55rem 1.3rem; border-radius: 2px; font-size: 0.75rem!important; letter-spacing: 0.15em!important; }
+    .hamburger { display: none; background: none; border: none; font-size: 1.5rem; color: var(--deep); cursor: pointer; }
 
-/* ── PLAN TYPE BANNER ── */
-.plan-banner{background:var(--terracotta);color:white;text-align:center;padding:0.75rem 1.5rem;font-size:0.78rem;letter-spacing:0.1em;font-weight:400;text-transform:uppercase;}
+    /* ── HERO ── */
+    .hero { padding: 150px 4rem 60px; max-width: 920px; margin: 0 auto; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-light); font-weight: 400; margin-bottom: 1.2rem; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.8rem, 6vw, 4.5rem); color: var(--deep); line-height: 1.1; margin-bottom: 1.2rem; }
+    .hero h1 em { color: var(--forest); font-style: italic; }
+    .hero .lead { font-size: 1.05rem; line-height: 1.85; color: var(--text-light); max-width: 580px; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); text-decoration: none; margin-bottom: 1.5rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--deep); }
 
-.reveal{opacity:1;transform:none;transition:opacity 0.7s ease,transform 0.7s ease;}.reveal.visible{opacity:1;transform:none;}.eyebrow{font-size:0.8rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-light);font-weight:400;margin-bottom:1.2rem;}.section-label{font-size:0.85rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);margin-bottom:0.8rem;}.hero{padding:150px 4rem 60px;max-width:920px;margin:0 auto;}.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.8rem,6vw,4.5rem);color:var(--deep);line-height:1.1;margin-bottom:1.2rem;}.hero h1 em{color:var(--forest);font-style:italic;}.hero .lead{font-size:1.05rem;line-height:1.85;color:var(--text-light);max-width:680px;margin-bottom:1.8rem;}.back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);text-decoration:none;margin-bottom:1.5rem;transition:color 0.2s;}.back-link:hover{color:var(--deep);}
+    /* ── DIVIDER ── */
+    .divider { height: 1px; background: rgba(58,90,105,0.1); max-width: 920px; margin: 0 auto; }
 
-/* ── SECTIONS ── */
-.section{max-width:920px;margin:0 auto;padding:4rem;}.section h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--deep);line-height:1.2;margin-bottom:1.2rem;}.section p{font-size:1.05rem;line-height:1.85;color:var(--text-light);}.section p+p{margin-top:1rem;}.divider{height:1px;background:rgba(58,90,105,0.1);max-width:920px;margin:0 auto;}
+    /* ── SECTIONS ── */
+    .section { max-width: 920px; margin: 0 auto; padding: 4rem; }
+    .section-label { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.8rem; }
+    .section h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: var(--deep); line-height: 1.2; margin-bottom: 1.2rem; }
+    .section p { font-size: 1rem; line-height: 1.85; color: var(--text-light); }
+    .section p + p { margin-top: 1rem; }
 
-/* ── SERVICE CARDS ── */
-.service-card{background:white;border:0.5px solid rgba(58,90,105,0.15);border-radius:4px;padding:2.4rem 2.8rem;margin-top:2rem;position:relative;}
-.service-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--sage);border-radius:4px 0 0 4px;}
-.service-card.terracotta-card::before{background:var(--terracotta);}
-.service-card .funding-tag{display:inline-block;font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--forest);background:rgba(58,107,122,0.08);padding:0.3rem 0.8rem;border-radius:2px;margin-bottom:1rem;}
-.service-card .funding-tag.warm{color:var(--terracotta);background:rgba(168,90,72,0.08);}
-.service-card h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--deep);margin-bottom:0.4rem;}
-.service-card .funding-line{font-size:0.78rem;letter-spacing:0.06em;color:var(--text-light);font-style:italic;margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(58,90,105,0.1);}
-.service-card p{font-size:1rem;line-height:1.85;color:var(--text-light);}
-.service-card p+p{margin-top:0.9rem;}
+    /* ── ARROW LIST ── */
+    .policy-list { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .policy-list li { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 1rem; color: var(--text-light); line-height: 1.75; }
+    .policy-list li::before { content: '→'; color: var(--terracotta); flex-shrink: 0; margin-top: 1px; }
 
-/* ── ARROW LIST ── */
-.arrow-list{list-style:none;margin:1.2rem 0 1.4rem;}
-.arrow-list li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.97rem;color:var(--text-light);line-height:1.7;padding:0.5rem 0;border-bottom:1px solid rgba(58,90,105,0.07);}
-.arrow-list li:last-child{border-bottom:none;}
-.arrow-list li::before{content:'→';color:var(--terracotta);flex-shrink:0;margin-top:1px;}
+    /* ── TWO COLUMN SECTION ── */
+    .section-row { max-width: 920px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; }
+    .section-row .col { padding: 4rem; }
+    .section-row .col:first-child { border-right: 1px solid rgba(58,90,105,0.1); }
+    .section-row .col h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(1.5rem, 2.5vw, 2rem); color: var(--deep); line-height: 1.2; margin-bottom: 1rem; }
+    .section-row .col p { font-size: 1rem; line-height: 1.85; color: var(--text-light); }
+    .section-row .col p + p { margin-top: 0.9rem; }
 
-/* ── DETAIL PILLS ── */
-.detail-pills{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid rgba(58,90,105,0.1);}
-.pill{display:inline-flex;align-items:center;gap:0.4rem;background:var(--warm-white);border:1px solid rgba(58,90,105,0.15);border-radius:40px;padding:0.35rem 0.9rem;font-size:0.75rem;color:var(--text-light);letter-spacing:0.03em;}
-.pill::before{content:'✓';color:var(--forest);font-size:0.72rem;}
+    /* ── TEAL CARD ── */
+    .teal-card { background: var(--deep); color: white; border-radius: 4px; padding: 3.5rem 4rem; max-width: 920px; margin: 0 auto; }
+    .teal-card h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: white; margin-bottom: 1rem; }
+    .teal-card h2 em { font-style: italic; color: var(--blush); }
+    .teal-card p { font-size: 1rem; line-height: 1.85; color: rgba(255,255,255,0.8); }
+    .teal-card p + p { margin-top: 0.9rem; }
 
-/* ── TEXT LINK ── */
-.text-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--forest);font-size:0.88rem;letter-spacing:0.04em;text-decoration:none;border-bottom:1px solid rgba(58,107,122,0.25);padding-bottom:1px;transition:color 0.2s,border-color 0.2s;}
-.text-link:hover{color:var(--terracotta);border-color:rgba(168,90,72,0.3);}
+    /* ── REVEAL ── */
+    .reveal { opacity: 1; transform: none; transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
 
-/* ── NOTICE BOX ── */
-.notice-box{background:rgba(58,107,122,0.06);border-left:3px solid var(--sage);border-radius:0 4px 4px 0;padding:1.2rem 1.8rem;margin-top:2.5rem;font-size:0.9rem;color:var(--text-light);line-height:1.8;}
-.notice-box strong{color:var(--deep);font-weight:500;}
+    /* ── FOOTER ── */
+    footer { background: var(--deep); color: white; padding: 3rem 4rem 2rem; margin-top: 5rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 3rem; justify-content: space-between; align-items: flex-start; }
+    .footer-brand { display: flex; align-items: center; gap: 1.2rem; } .footer-brand-text p { font-size: 0.9rem; opacity: 0.7; max-width: 220px; line-height: 1.6; }
+    .footer-links h4 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; margin-bottom: 1rem; font-weight: 400; }
+    .footer-links { display: flex; flex-direction: column; } .footer-links ul { list-style: none; }
+    .footer-links li + li { margin-top: 0.5rem; }
+    .footer-links a { color: white; text-decoration: none; font-size: 0.9rem; opacity: 0.8; }
+    .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.5; }
 
-/* ── CTA BANNER ── */
-.teal-banner{background:var(--deep);color:white;padding:5rem 4rem;text-align:center;}.teal-banner h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;}.teal-banner h2 em{color:var(--blush);font-style:italic;}.teal-banner p{font-size:1.05rem;line-height:1.7;opacity:0.85;max-width:600px;margin:0 auto 0.6rem;}.teal-banner .cta-note{font-size:0.82rem;opacity:0.55;font-style:italic;margin-bottom:2rem;}.btn-primary{display:inline-block;background:var(--terracotta);color:white;padding:0.85rem 2.2rem;font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.3s;}.btn-primary:hover{background:var(--forest);}.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,0.5);color:white;padding:0.85rem 2.2rem;font-family:'Jost',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;border-radius:2px;margin-left:1rem;transition:background 0.3s;}.btn-ghost:hover{background:rgba(255,255,255,0.1);}
-
-footer{background:var(--deep);color:white;padding:3rem 4rem 2rem;}.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:3rem;justify-content:space-between;}.footer-brand p{font-size:0.9rem;opacity:0.7;margin-top:0.5rem;max-width:280px;line-height:1.6;}.footer-links h4{font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.5;margin-bottom:1rem;font-weight:400;}.footer-links ul{list-style:none;}.footer-links li+li{margin-top:0.5rem;}.footer-links a{color:white;text-decoration:none;font-size:0.9rem;opacity:0.8;}.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);font-size:0.8rem;opacity:0.5;}
-
-@media(max-width:768px){nav{padding:1rem 1.5rem;}.hamburger{display:block;}nav ul{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--warm-white);padding:1.5rem;gap:1rem;box-shadow:0 4px 20px rgba(0,0,0,0.1);}nav ul.open{display:flex;}.hero,.section{padding-left:1.5rem;padding-right:1.5rem;}.teal-banner{padding:3rem 1.5rem;}footer{padding:2rem 1.5rem;}.service-card{padding:1.8rem 1.6rem;}.btn-ghost{margin-left:0;margin-top:0.8rem;display:block;text-align:center;}}</style></head><body>
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .hamburger { display: block; }
+      nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--warm-white); padding: 1.5rem; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+      nav ul.open { display: flex; }
+      .hero, .section { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .section-row { grid-template-columns: 1fr; }
+      .section-row .col { padding: 2.5rem 1.5rem; }
+      .section-row .col:first-child { border-right: none; border-bottom: 1px solid rgba(58,90,105,0.1); }
+      .teal-card { padding: 2.5rem 1.5rem; margin: 0 1.5rem; }
+      footer { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
 
 <nav>
   <a href="index.html"><img src="https://morethancounselling.com/assets/mtc-logo.png" alt="More Than Counselling" class="nav-logo" onerror="this.style.display='none'"/></a>
@@ -55,7 +106,7 @@ footer{background:var(--deep);color:white;padding:3rem 4rem 2rem;}.footer-inner{
   <ul id="nav-menu">
     <li><a href="index.html" class="nav-link">Home</a></li>
     <li><a href="about.html" class="nav-link">About</a></li>
-    <li><a href="services.html" class="nav-link active">Services</a></li>
+    <li><a href="services.html" class="nav-link">Services</a></li>
     <li><a href="yoga.html" class="nav-link">Yoga &amp; Movement</a></li>
     <li><a href="https://clientportal.zandahealth.com/clientportal/morethancounselling" target="_blank" class="nav-btn">Book a Session</a></li>
   </ul>
@@ -65,127 +116,78 @@ footer{background:var(--deep);color:white;padding:3rem 4rem 2rem;}.footer-inner{
 
   <!-- HERO -->
   <div class="hero">
-    <a href="services.html" class="back-link reveal">&larr; All Services</a>
-    <p class="eyebrow reveal">NDIS Services</p>
-    <h1 class="reveal">Support that sees<br><em>the whole person</em></h1>
-    <p class="lead reveal">More Than Counselling supports NDIS participants to build capacity, improve wellbeing, and move through life with greater confidence and independence. I work with self-managed and plan-managed participants across three service areas &hellip; bringing a qualified, person-centred approach to every aspect of my work.</p>
-    <div class="clearance-badge reveal">NDIS Worker Screening Clearance held</div>
+    <a href="index.html" class="back-link reveal">&larr; Home</a>
+    <p class="eyebrow reveal">The Formal Stuff</p>
+    <h1 class="reveal">What is<br><em>Informed Consent?</em></h1>
+    <p class="lead reveal">Before we begin working together, Fionna wants you to fully understand what you&rsquo;re agreeing to &hellip; and why it matters.</p>
   </div>
-
-  <!-- PLAN TYPE BANNER -->
-  <div class="plan-banner">Accepting self-managed &amp; plan-managed participants</div>
 
   <div class="divider"></div>
 
-  <!-- SERVICE 1: COUNSELLING -->
+  <!-- WHAT IT IS -->
   <div class="section reveal">
     <p class="section-label">01</p>
-    <h2>Therapeutic Counselling</h2>
-    <div class="service-card">
-      <span class="funding-tag">Capacity Building</span>
-      <p class="funding-line">Improved Daily Living</p>
-      <p>Living with a disability or chronic condition can bring unexpected emotional challenges &hellip; grief, frustration, identity shifts, and the weight of adjusting to a life that may look very different than you&rsquo;d planned.</p>
-      <p>Therapeutic counselling provides a supported space to process those experiences, develop coping strategies, and build the psychological skills and resilience to navigate daily life with greater clarity and confidence.</p>
-      <p>Sessions are integrative, trauma-informed, and tailored to your individual goals and NDIS plan.</p>
-      <div class="detail-pills">
-        <span class="pill">In-person &amp; online</span>
-        <span class="pill">Australia-wide</span>
-        <span class="pill">Self &amp; plan-managed</span>
-        <span class="pill">CB: Improved Daily Living</span>
-      </div>
-      <div style="margin-top:1.4rem;">
-        <a href="service-counselling.html" class="text-link">Learn more about counselling at More Than Counselling &rarr;</a>
-      </div>
-    </div>
+    <h2>What it is</h2>
+    <p>Informed consent is the process through which you, as a client, are given clear and honest information about the nature of counselling, what to expect, how sessions work, and the conditions under which we work together. It exists so you can make a free, voluntary, and fully informed decision to engage in the therapeutic process.</p>
+    <p>This isn&rsquo;t just a formality. Informed consent is the foundation of an ethical and respectful therapeutic relationship. It ensures you feel empowered, informed, and in control of your own journey from the very beginning.</p>
   </div>
 
   <div class="divider"></div>
 
-  <!-- SERVICE 2: MOVEMENT -->
+  <!-- YOUR RIGHTS -->
   <div class="section reveal">
     <p class="section-label">02</p>
-    <h2>Movement-Based Capacity Building</h2>
-    <div class="service-card terracotta-card">
-      <span class="funding-tag warm">Capacity Building</span>
-      <p class="funding-line">Improved Health &amp; Wellbeing &nbsp;/&nbsp; Improved Daily Living</p>
-      <p>For participants with physical restrictions or mobility challenges, I offer therapeutic movement support designed to help you safely increase your functional capacity, body confidence, and independence in daily life.</p>
-      <p>As a qualified counsellor and certified yoga teacher with access to specialist movement equipment, I draw on evidence-informed therapeutic movement principles to support you in:</p>
-      <ul class="arrow-list">
-        <li>Improving balance, coordination, and safe body movement</li>
-        <li>Building strength and mobility to support everyday activities</li>
-        <li>Developing body awareness and confidence in physical function</li>
-        <li>Reducing barriers to participation in daily and community life</li>
-      </ul>
-      <p>This support is delivered at a pace that respects your physical needs and comfort &hellip; and is always grounded in a trauma-informed, therapeutic framework that considers the whole person, not just the physical.</p>
-      <div class="detail-pills">
-        <span class="pill">In-person</span>
-        <span class="pill">Self &amp; plan-managed</span>
-        <span class="pill">CB: Improved Health &amp; Wellbeing</span>
-        <span class="pill">CB: Improved Daily Living</span>
-      </div>
+    <h2>Your rights as a client</h2>
+    <p>You always have the right to:</p>
+    <ul class="policy-list">
+      <li>Ask questions about the counselling process at any time</li>
+      <li>Withdraw from counselling at any point, without penalty</li>
+      <li>Decline to discuss any topic you don&rsquo;t feel ready for</li>
+      <li>Request a referral to another practitioner if needed</li>
+      <li>Access your personal records in accordance with privacy legislation</li>
+      <li>Receive services free from discrimination, harassment, or exploitation of any kind</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- WHAT TO EXPECT + CONFIDENTIALITY (two column) -->
+  <div class="section-row reveal">
+    <div class="col">
+      <p class="section-label">03</p>
+      <h2>What to expect</h2>
+      <p>Counselling is a collaborative and confidential process. Sessions are available in person or via telehealth and are typically 50 minutes in duration.</p>
+      <p>The process may involve exploring thoughts, feelings, behaviours, and past experiences. Progress looks different for everyone &hellip; you will never be pushed to move faster than feels right for you.</p>
+    </div>
+    <div class="col">
+      <p class="section-label">04</p>
+      <h2>Confidentiality</h2>
+      <p>Everything you share in sessions is kept strictly confidential. There are limited legal and ethical exceptions where disclosure may be required &hellip; if there is a serious risk of harm to yourself or another person, if child abuse or neglect is disclosed, or if required by a court of law.</p>
+      <p>In all other circumstances, Fionna will discuss any intended disclosure with you first, wherever it is safe to do so.</p>
     </div>
   </div>
 
   <div class="divider"></div>
 
-  <!-- SERVICE 3: SUPPORT WORKER -->
+  <!-- SUPERVISION -->
   <div class="section reveal">
-    <p class="section-label">03</p>
-    <h2>Support Worker Services</h2>
-    <div class="service-card">
-      <span class="funding-tag">Core Supports</span>
-      <p class="funding-line">Assistance with Daily Life</p>
-      <p>I offer personalised support worker services for participants who need practical, compassionate assistance with daily life activities.</p>
-      <p>As a qualified therapeutic practitioner with First Aid certification and a current NDIS Worker Screening Clearance, I bring a considered, person-centred approach to support work &hellip; one that goes beyond task assistance to help you build confidence, independence, and capacity in your everyday routines.</p>
-      <p>Support may include assistance with daily activities, community access, and working toward the goals in your NDIS plan in a way that feels respectful and meaningful to you.</p>
-      <div class="detail-pills">
-        <span class="pill">In-person</span>
-        <span class="pill">Self &amp; plan-managed</span>
-        <span class="pill">Core Supports: Daily Life</span>
-        <span class="pill">NDIS Clearance held</span>
-      </div>
-    </div>
-
-    <!-- NOTICE BOX -->
-    <div class="notice-box">
-      <strong>Please note:</strong> Your NDIS plan will need to include the relevant funding category for the support you&rsquo;re seeking. If you&rsquo;re unsure, your support coordinator or plan manager can help you confirm this before we get started.
-    </div>
+    <p class="section-label">05</p>
+    <h2>Supervision</h2>
+    <p>As part of maintaining ethical practice and ongoing professional development, Fionna participates in regular clinical supervision. Your information may be discussed in supervision in a strictly anonymised format &hellip; your name and any identifying details will never be disclosed.</p>
   </div>
 
   <div class="divider"></div>
 
-  <!-- NDIS INFORMATION -->
-  <div class="section reveal">
-    <p class="section-label">NDIS Information</p>
-    <h2>How NDIS funding works</h2>
-    <p>Services are billed under the relevant support categories per current NDIS Pricing Arrangements and Price Limits. All invoices are provided promptly for self-managed and plan-managed participants.</p>
-    <div style="background:var(--linen);border-radius:4px;padding:2rem 2.4rem;margin-top:1.5rem;">
-      <div style="display:flex;flex-wrap:wrap;gap:2.5rem;">
-        <div>
-          <p style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--deep);margin-bottom:0.4rem;">Support Categories</p>
-          <p style="font-size:0.95rem;color:var(--text-light);line-height:1.6;">Improved Daily Living<br>Improved Health &amp; Wellbeing<br>Core Supports: Assistance with Daily Life</p>
-        </div>
-        <div>
-          <p style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--deep);margin-bottom:0.4rem;">Plan Management</p>
-          <p style="font-size:0.95rem;color:var(--text-light);line-height:1.6;">Self-managed<br>Plan-managed</p>
-        </div>
-        <div>
-          <p style="font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--deep);margin-bottom:0.4rem;">Locations</p>
-          <p style="font-size:0.95rem;color:var(--text-light);line-height:1.6;">In-person (Hervey Bay)<br>Online &mdash; Australia-wide</p>
-        </div>
-      </div>
+  <!-- CONSENT IS ONGOING -->
+  <div class="section reveal" style="padding-bottom: 5rem;">
+    <p class="section-label">06</p>
+    <h2>Consent is ongoing</h2>
+    <div class="teal-card">
+      <h2>Your consent <em>always matters</em></h2>
+      <p>By proceeding with counselling, you confirm you&rsquo;ve had the opportunity to read this information, ask questions, and feel ready to begin.</p>
+      <p>Consent isn&rsquo;t a one time event &hellip; if at any point you want to pause or end our work together, please just say so. The transition will be managed with care and professionalism.</p>
     </div>
   </div>
-
-  <div class="divider"></div>
-
-  <!-- CTA -->
-  <section class="teal-banner reveal">
-    <h2>Ready to get <em>started?</em></h2>
-    <p>If you&rsquo;re a self-managed or plan-managed NDIS participant and would like to explore how More Than Counselling can support your goals, I&rsquo;d love to hear from you.</p>
-    <p class="cta-note">Please complete the enquiry form and I&rsquo;ll be in touch to discuss how I can best support you.</p>
-    <a href="contact.html" class="btn-primary">Submit a Referral Enquiry</a>
-  </section>
 
 </main>
 
@@ -232,4 +234,5 @@ footer{background:var(--deep);color:white;padding:3rem 4rem 2rem;}.footer-inner{
   }, 800);
 </script>
 
-</body></html>
+</body>
+</html>
