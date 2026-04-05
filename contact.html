@@ -268,7 +268,7 @@
     }
   
     /* FOOTER */
-    footer { background: var(--deep, #2C3E50); color: white; padding: 3rem 4rem 2rem; }
+    footer { position: relative; z-index: 10; background: var(--deep, #2C3E50); color: white; padding: 3rem 4rem 2rem; }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 3rem; justify-content: space-between; }
     .footer-brand p { font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem; max-width: 280px; line-height: 1.6; }
     .footer-links h4 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; margin-bottom: 1rem; font-weight: 400; }
@@ -277,6 +277,13 @@
     .footer-links a { color: white; text-decoration: none; font-size: 0.9rem; opacity: 0.8; transition: opacity 0.2s; }
     .footer-links a:hover { opacity: 1; }
     .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.5; }
+
+    @media (max-width: 800px) {
+      footer { padding: 2.5rem 1.5rem 1.5rem; }
+      .footer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { display: flex; flex-direction: column; gap: 0.5rem; }
+    }
 
   
 /* INCREASED FONT SIZES */
@@ -310,7 +317,7 @@ li { font-size: 1.08rem; line-height: 1.85; }
         </div>
         <div>
           <div class="detail-label">Email</div>
-          <div class="detail-value"><a href="/cdn-cgi/l/email-protection#244540494d4a64494b5641504c454a474b514a574148484d4a430a474b49"><span class="__cf_email__" data-cfemail="95f4f1f8fcfbd5f8fae7f0e1fdf4fbf6fae0fbe6f0f9f9fcfbf2bbf6faf8">[email&#160;protected]</span></a></div>
+          <div class="detail-value"><a href="mailto:admin@morethancounselling.com">admin@morethancounselling.com</a></div>
         </div>
       </div>
 
@@ -440,6 +447,8 @@ li { font-size: 1.08rem; line-height: 1.85; }
 
     </div>
   </main>
+
+</div><!-- end .page-wrapper -->
 
 <footer>
   <div class="footer-inner">
