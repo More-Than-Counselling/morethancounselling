@@ -166,6 +166,25 @@
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .form-note { font-size: 0.72rem; color: var(--text-light); margin-top: 0.9rem; text-align: center; }
   .form-note a { color: var(--forest); }
+  .radio-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .radio-option input[type="radio"] { display: none; }
+  .radio-pill {
+    display: inline-block; padding: 0.5rem 1.2rem; border: 1px solid rgba(74,107,90,0.2);
+    border-radius: 2px; background: var(--linen); cursor: pointer; font-size: 0.85rem;
+    font-family: 'Jost', sans-serif; color: var(--text); transition: all 0.2s;
+    text-transform: none; letter-spacing: 0;
+  }
+  .radio-option input[type="radio"]:checked + .radio-pill {
+    background: var(--forest); color: white; border-color: var(--forest);
+  }
+  .ndis-note {
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    background: rgba(122,155,170,0.08); border-radius: 2px; padding: 1rem 1.2rem; margin-bottom: 1.1rem;
+  }
+  .ndis-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); flex-shrink: 0; margin-top: 0.35rem; }
+  .ndis-note p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; margin: 0; }
+  .form-error-msg { display: none; text-align: center; padding: 1rem; margin-bottom: 1rem; background: #fdf2f0; border: 1px solid #e8b4a8; border-radius: 2px; color: var(--text); font-size: 0.85rem; }
+  .form-error-msg a { color: var(--forest); }
 
   /* FOOTER */
   footer { background: var(--deep); color: white; padding: 3rem 4rem 2rem; }
@@ -382,44 +401,82 @@ li { font-size: 1.08rem; line-height: 1.85; }
       <p class="section-body">Sessions are available in-person and online... Reach out below and Fionna will be in touch within 24 hours to discuss how she can support you.</p>
       <p class="section-body" style="margin-top:1rem;">All enquiries are completely confidential... there's no pressure, no commitment... just a conversation.</p>
     </div>
-    <form id="contact-form" class="contact-form" name="enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="submitForm(event)">
-      <input type="hidden" name="form-name" value="enquiry" />
-      <div class="form-row">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" name="first-name" placeholder="Your first name" />
+    <div class="contact-form">
+      <div class="form-error-msg" id="formErrorMsg">
+        <p>Something went wrong sending your message. Please try emailing <a href="mailto:admin@morethancounselling.com">admin@morethancounselling.com</a> directly.</p>
+      </div>
+      <div id="formWrap">
+        <div class="ndis-note">
+          <div class="ndis-dot"></div>
+          <p><strong>NDIS participants welcome.</strong> Please mention in your message if you're self-managed, plan-managed, or if you'd like more information about NDIS-funded support.</p>
         </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" name="last-name" placeholder="Your last name" />
+        <form id="contact-form" name="contact" action="/contact.html" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none"><input name="bot-field" /></p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hp-firstName">First Name *</label>
+              <input type="text" id="hp-firstName" name="firstName" placeholder="Your first name" required />
+            </div>
+            <div class="form-group">
+              <label for="hp-lastName">Last Name</label>
+              <input type="text" id="hp-lastName" name="lastName" placeholder="Your last name" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="hp-email">Email Address *</label>
+              <input type="email" id="hp-email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="hp-phone">Phone Number</label>
+              <input type="tel" id="hp-phone" name="phone" placeholder="Optional" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hp-enquiryType">What brings you here?</label>
+            <select id="hp-enquiryType" name="enquiryType">
+              <option value="" disabled selected>Select one...</option>
+              <option value="individual">Individual counselling</option>
+              <option value="yoga">Therapeutic yoga</option>
+              <option value="group">Group workshop</option>
+              <option value="ndis">NDIS-funded support</option>
+              <option value="other">General enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Preferred way to connect</label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input type="radio" name="contactPref" id="hp-prefEmail" value="email" checked />
+                <label class="radio-pill" for="hp-prefEmail">Email</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="contactPref" id="hp-prefPhone" value="phone" />
+                <label class="radio-pill" for="hp-prefPhone">Phone</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="contactPref" id="hp-prefEither" value="either" />
+                <label class="radio-pill" for="hp-prefEither">Either is fine</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hp-message">Your Message *</label>
+            <textarea id="hp-message" name="message" placeholder="Share as much or as little as feels comfortable..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;border:none;cursor:pointer;">Send Message</button>
+          <p class="form-note">Or book directly via <a href="https://clientportal.zandahealth.com/clientportal/morethancounselling" target="_blank">Client Portal</a> &middot; All enquiries are confidential</p>
+        </form>
+      </div>
+      <div id="form-thankyou" style="display:none; text-align:center; padding:3rem 2rem;">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,rgba(122,155,170,0.3),var(--sage));display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; color:var(--deep); font-size:2rem; margin-bottom:1rem;">Thank you for reaching out</h2>
+        <p style="opacity:0.7; line-height:1.6;">Your message has been received. I'll be in touch within 2 business days.<br>In the meantime, be gentle with yourself.</p>
       </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" name="email" placeholder="your@email.com" />
-      </div>
-      <div class="form-group">
-        <label>I'm interested in</label>
-        <select name="service-interest">
-          <option>Individual Counselling</option>
-          <option>Yoga &amp; Movement</option>
-          <option>Breathwork &amp; Meditation</option>
-          <option>Workshops / Online Courses</option>
-          <option>I'm not sure yet</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Tell me a little about what you're navigating</label>
-        <textarea name="message" placeholder="There's no pressure to share everything... even a few words helps me prepare for our conversation."></textarea>
-      </div>
-      <button type="submit" class="btn-primary" style="width:100%;border:none;cursor:pointer;">Send My Enquiry</button>
-      <p class="form-note">Or book directly via <a href="https://clientportal.zandahealth.com/clientportal/morethancounselling" target="_blank">Client Portal</a> &middot; All enquiries are confidential</p>
-    
-    <div id="form-thankyou" style="display:none; text-align:center; padding:3rem 2rem;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--deep)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1.2rem;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; color:var(--deep); font-size:2rem; margin-bottom:1rem;">Thank you for your enquiry. We will be in contact with you shortly.</p>
     </div>
-  </form>
   </div>
 </section>
 
@@ -482,26 +539,38 @@ li { font-size: 1.08rem; line-height: 1.85; }
     setTimeout(function() { reveals.forEach(function(r) { r.classList.add("visible"); }); }, 800);
     var links = document.querySelectorAll('.nav-link');
     links.forEach(function(l) { if (l.href === window.location.href) l.classList.add('active'); });
-    function submitForm(e) {
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
+      var first = document.getElementById('hp-firstName').value.trim();
+      var email = document.getElementById('hp-email').value.trim();
+      var msg = document.getElementById('hp-message').value.trim();
+      if (!first || !email || !msg) {
+        alert('Please fill in your first name, email address, and message.');
+        return;
+      }
+      var btn = e.target.querySelector('.btn-primary');
+      var errorEl = document.getElementById('formErrorMsg');
+      if (errorEl) errorEl.style.display = 'none';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
       var form = e.target;
-      var data = new FormData(form);
-      var body = new URLSearchParams(data).toString();
-      var req = new XMLHttpRequest();
-      req.open('POST', '/');
-      req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      req.onload = function() {
-        form.style.display = 'none';
+      var data = new URLSearchParams(new FormData(form)).toString();
+      fetch(form.action || '/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
+      })
+      .then(function(response) {
+        if (!response.ok) throw new Error('Status ' + response.status);
+        document.getElementById('formWrap').style.display = 'none';
         var ty = document.getElementById('form-thankyou');
         if (ty) ty.style.display = 'block';
-      };
-      req.onerror = function() {
-        form.style.display = 'none';
-        var ty = document.getElementById('form-thankyou');
-        if (ty) ty.style.display = 'block';
-      };
-      req.send(body);
-    }
+      })
+      .catch(function(err) {
+        console.error('Form error:', err);
+        if (errorEl) errorEl.style.display = 'block';
+        if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+      });
+    });
   </script>
 </body>
 </html>
