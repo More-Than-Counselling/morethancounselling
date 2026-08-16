@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
 <meta name="color-scheme" content="light only">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Integrative Somatic Counselling | More Than Counselling</title>
-<meta name="description" content="Integrative somatic counselling on the Fraser Coast and online across Australia. The nervous system and the story, together.">
+<title>Integrative Somatic Counselling | Hervey Bay and Online</title>
+<meta name="description" content="Counselling for when life is heavier than it looks. Individual and family sessions in Hervey Bay, in your home, or online anywhere in Australia.">
+<link rel="canonical" href="https://www.morethancounselling.com/counselling.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Fionna Findley">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Hervey Bay">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="More Than Counselling">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="Integrative Somatic Counselling | Hervey Bay and Online">
+<meta property="og:description" content="Counselling for when life is heavier than it looks. Individual and family sessions in Hervey Bay, in your home, or online anywhere in Australia.">
+<meta property="og:url" content="https://www.morethancounselling.com/counselling.html">
+<meta property="og:image" content="https://www.morethancounselling.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="More Than Counselling, integrative somatic counselling and yoga in Hervey Bay">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrative Somatic Counselling | Hervey Bay and Online">
+<meta name="twitter:description" content="Counselling for when life is heavier than it looks. Individual and family sessions in Hervey Bay, in your home, or online anywhere in Australia.">
+<meta name="twitter:image" content="https://www.morethancounselling.com/images/og-cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light only;--teal:#2A4A5E;--terracotta:#C4622D;--charcoal:#2C2825;--cream:#F5EDE6;--blush:#F0DCCE;--rosewood:#B77E63;--tealsoft:rgba(42,74,94,.08)}
+:root{color-scheme:light only;--teal:#2A4A5E;--terracotta:#C4622D;--charcoal:#2C2825;--cream:#F5EDE6;--blush:#F0DCCE;--rosewood:#B77E63;--tealsoft:rgba(42,74,94,.08);--cta:#2A4A5E;--active:#F2C9A8}  /* --cta: deep teal #2A4A5E  ·  eucalypt was #5E7A72 */
 *{margin:0;padding:0;box-sizing:border-box}
-html{background:#FAF3EA;font-size:17.5px}
-body{background:#FAF3EA url('images/paper-bg.jpg') center top / cover fixed;color:var(--charcoal);font-family:'Jost',sans-serif;font-weight:300;line-height:1.78;font-size:1.08rem}
+html{background:#FCF9F5;font-size:17.5px;scroll-behavior:smooth}
+[id]{scroll-margin-top:96px}
+body{background:#FCF9F5 url('images/linen.png') center top / 240px 240px repeat fixed;color:var(--charcoal);font-family:'Jost',sans-serif;font-weight:300;line-height:1.78;font-size:1.08rem}
 h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--teal);line-height:1.18}
 img{display:block;max-width:100%}
-.btn{display:inline-block;background:var(--terracotta);color:#fff;text-decoration:none;padding:.8rem 2.2rem;
+.btn{display:inline-block;background:var(--cta);color:#fff;text-decoration:none;padding:.8rem 2.2rem;
   letter-spacing:.12em;text-transform:uppercase;font-size:.83rem;font-weight:400;border-radius:999px}
 .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.85)}
 .btn.ghost.dark{color:var(--teal);border-color:var(--teal)}
 .btn.small{padding:.55rem 1.5rem;font-size:.78rem}
+.note{font-size:.93rem;color:var(--rosewood)}
+/* buttons invert to cream on the dark bands, so they never vanish */
+.ibar .links a.btn,
+.statement .btn{background:var(--cream);color:var(--cta)}
+.statement .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.85)}
 
 /* nav over hero */
 .hero{position:relative;min-height:82vh;display:flex;flex-direction:column}
@@ -39,22 +66,26 @@ nav .logo img{height:56px}
 @media(max-width:640px){.hero{min-height:88vh}.hero-copy{margin-left:0;margin-bottom:3rem}}
 
 .wrap{max-width:1120px;margin:0 auto;padding:0 2rem}
-section.pad{padding:9.5rem 0}
+section.pad{padding:6.5rem 0}
+@media(max-width:640px){section.pad{padding:4rem 0}}
+/* section rhythm: a barely-there blush band, applied by hand where it helps */
+section.pad.tint{background:rgba(240,220,206,.15)}
 
 /* mixed-case headings: spaced caps with italic serif accents */
 .mixhead{font-family:'Jost',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.2em;
   color:var(--teal);font-size:clamp(1rem,2.1vw,1.4rem);line-height:2;margin-bottom:1.2rem}
+.forwho{display:block;font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:var(--terracotta);margin-bottom:1.2rem}
 .mixhead em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;text-transform:none;
-  letter-spacing:.01em;color:var(--terracotta);font-size:1.9em;line-height:1;vertical-align:-.1em}
+  letter-spacing:.01em;color:var(--terracotta);font-size:1.9em;line-height:1;vertical-align:baseline}
 
 /* the > list... the same > that forms the path through the logo */
 .morelist{list-style:none;max-width:33rem;margin:1.8rem auto;text-align:left}
-.morelist li{position:relative;padding-left:2.3rem;margin-bottom:.7rem;font-size:1.05rem}
-.morelist li::before{content:'';background:url('images/mandala.png') center/contain no-repeat;
-  width:1.35em;height:1.35em;position:absolute;left:0;top:.28em}
+.morelist li{position:relative;padding-left:1.9rem;margin-bottom:.7rem;font-size:1.05rem}
+.morelist li::before{content:'>';color:var(--terracotta);font-family:'Jost',sans-serif;
+  font-weight:500;font-size:1.02em;position:absolute;left:.35rem;top:0;line-height:inherit}
 
 /* marquee band */
-.marquee{background:linear-gradient(#C4622D,#B65826);overflow:hidden;padding:2.6rem 0;white-space:nowrap}
+.marquee{background:linear-gradient(#B77E63,#A96F56);overflow:hidden;padding:2.6rem 0;white-space:nowrap}
 .marquee .track{display:inline-block;animation:mq 30s linear infinite}
 .marquee span.t{color:#FAF0E6;font-family:'Jost',sans-serif;font-weight:400;text-transform:uppercase;
   letter-spacing:.22em;font-size:clamp(.8rem,1.5vw,.98rem);margin:0 1.2rem}
@@ -80,13 +111,13 @@ section.pad{padding:9.5rem 0}
 
 /* outcomes bullets */
 .outcomes ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.4rem 3.5rem;max-width:60rem;margin:0 auto}
-.outcomes li{padding-left:1.9rem;position:relative;margin-bottom:.7rem}
-.outcomes li::before{content:'';background:url('images/mandala.png') center/contain no-repeat;
-  width:1.3em;height:1.3em;position:absolute;left:0;top:.3em}
+.outcomes li{padding-left:1.7rem;position:relative;margin-bottom:.7rem;text-align:left}
+.outcomes li::before{content:'>';color:var(--terracotta);font-family:'Jost',sans-serif;
+  font-weight:500;position:absolute;left:.2rem;top:0;line-height:inherit}
 @media(max-width:760px){.outcomes ul{grid-template-columns:1fr}}
 
 /* statement band */
-.statement{background:linear-gradient(#B77E63,#A96F56);text-align:center;padding:7.5rem 2rem;color:#fff}
+.statement{background:linear-gradient(#B77E63,#A96F56);text-align:center;padding:6.5rem 2rem;color:#fff}
 .statement h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.8rem);max-width:34ch;margin:0 auto .6rem}
 
 /* waves motif */
@@ -96,26 +127,25 @@ section.pad{padding:9.5rem 0}
 .outcomes .wavbg{position:absolute;left:0;right:0;bottom:0;z-index:0}
 .outcomes .wavbg img{width:100%;display:block}
 .outcomes .wrap{position:relative;z-index:1}
-.prefoot{line-height:0}
-.prefoot img{width:100%;display:block}
 
 /* full-column split */
 .split2{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
 .split2 .img-col{min-height:480px}
 .split2 .img-col img{width:100%;height:100%;object-fit:cover;display:block}
-.split2 .txt-col{padding:8rem 4.5rem;display:flex;flex-direction:column;justify-content:center}
+.split2 .txt-col{padding:6.5rem 4.5rem;display:flex;flex-direction:column;justify-content:center}
 .split2 .txt-col .inner-copy{max-width:34rem;margin:0 auto}
 .split2 p{margin-bottom:1rem}
 @media(min-width:861px){.about{min-height:720px}}
 @media(min-width:1080px){.about{height:780px}}
 /* service cards */
 .svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;align-items:stretch}
-.svc{background:rgba(255,253,250,.85);border:1px solid #E7DBC9;border-radius:16px;padding:2.6rem 2rem;text-align:center;display:flex;flex-direction:column}
+.svc{background:#fff;border:1px solid #EFE6DA;box-shadow:0 1px 3px rgba(44,40,37,.05);border-radius:16px;padding:2.6rem 2rem;text-align:center;display:flex;flex-direction:column}
 .svc .mark{margin:0 auto 1.2rem;width:52px;height:52px;background:url('images/mandala.png') center/contain no-repeat}
 .svc h3{font-size:1.5rem;margin-bottom:.8rem}
 .svc p{font-size:.98rem;margin-bottom:1rem}
 .svc .fee{font-size:.9rem;color:var(--teal);letter-spacing:.03em;margin-top:auto}
-@media(max-width:860px){.svc-cards{grid-template-columns:1fr}}
+.svc-cards.four{grid-template-columns:repeat(2,1fr);margin-left:auto;margin-right:auto}
+@media(max-width:860px){.svc-cards{grid-template-columns:1fr}.svc-cards.four{grid-template-columns:1fr}}
 @media(max-width:860px){.split2{grid-template-columns:1fr}.split2 .img-col{min-height:340px}.split2 .txt-col{padding:3rem 2rem}.split2.img-first-mobile .img-col{order:-1}}
 
 /* name section waves background */
@@ -139,9 +169,41 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 .foot-links a{color:var(--cream);text-decoration:none;text-transform:uppercase}
 .foot-copy{font-size:.82rem;opacity:.75;max-width:34ch;line-height:1.7}
 </style>
-<style>.ibar{background:var(--teal);padding:1.1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+<style>.ibar{background:var(--teal);padding:1.1rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;position:sticky;top:0;z-index:60;box-shadow:0 2px 18px rgba(44,40,37,.14)}
+
+/* mobile menu button */
+.navtoggle{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px;padding:9px 6px}
+.navtoggle span{display:block;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .2s ease}
+.navtoggle span+span{margin-top:6px}
+.open .navtoggle span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.open .navtoggle span:nth-child(2){opacity:0}
+.open .navtoggle span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(prefers-reduced-motion:reduce){.navtoggle span{transition:none}}
+
 .ibar .links{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
 .ibar .links a{color:var(--cream);text-decoration:none;text-transform:uppercase;font-size:.82rem;letter-spacing:.12em}
+@media(max-width:860px){
+  .ibar{position:sticky}
+  .navtoggle{display:block}
+  .ibar .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+    align-items:flex-start;gap:.1rem;background:rgba(42,74,94,.98);padding:1rem 2rem 1.5rem;
+    box-shadow:0 12px 24px rgba(44,40,37,.2)}
+  .ibar.open .links{display:flex}
+  .ibar .links a{padding:.6rem 0;font-size:.9rem}
+  .ibar .links a.btn{margin-top:.6rem}
+  .ibar.scrolled .links{background:rgba(250,243,234,.98);box-shadow:0 12px 24px rgba(44,40,37,.14)}
+}
+/* scrolled: bar goes transparent over the paper, type flips to teal to stay legible */
+.ibar .logo-wrap{position:relative;display:block;line-height:0}
+.ibar .logo-wrap img{transition:opacity .3s ease}
+.ibar .dark-logo{position:absolute;left:0;top:0;opacity:0}
+.ibar.scrolled{background:rgba(250,243,234,.48);box-shadow:none;border-bottom:1px solid rgba(42,74,94,.08);
+  -webkit-backdrop-filter:blur(24px) saturate(1.2);backdrop-filter:blur(24px) saturate(1.2)}
+.ibar.scrolled .light-logo{opacity:0}
+.ibar.scrolled .dark-logo{opacity:1}
+.ibar.scrolled .links a{color:var(--teal)}
+.ibar.scrolled .links a.btn{background:var(--cta);color:#fff}
+.ibar.scrolled .navtoggle span{background:var(--teal)}
 .enquiry-frame{position:relative;width:100%;min-height:1150px;background:transparent}
 .enquiry-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;background:transparent;border:0}
 @media(max-width:640px){.enquiry-frame{min-height:1400px}}</style>
@@ -149,11 +211,12 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 <body>
 
 <div class="ibar">
-  <a href="index.html"><img src="images/logo-light.png" alt="More Than Counselling" style="height:52px"></a>
-  <div class="links">
+  <a class="logo-wrap" href="index.html"><img class="light-logo" src="images/logo-light.png" alt="More Than Counselling" style="height:52px"><img class="dark-logo" src="images/logo-dark.png" alt="" style="height:52px"></a>
+  <button class="navtoggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <div class="links" id="menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="counselling.html" style="color:#F2C9A8">Counselling</a>
+    <a href="counselling.html" style="color:var(--active)">Counselling</a>
     <a href="yoga.html">Yoga</a>
     <a href="contact.html">Contact</a>
     <a class="btn small" href="https://mtc.splose.com/online-booking/7491d0dd-19a4-4d1a-be67-9a94d87c840a" target="_blank" rel="noopener">Book now</a>
@@ -161,49 +224,105 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 </div>
 
 
-<section class="pad" style="text-align:center;padding-bottom:5rem"><div class="wrap" style="max-width:800px">
-  <div class="mixhead">Integrative Somatic <em>Counselling</em></div>
-  <p>The nervous system and the story, together, slowly, at your pace. Not to fix you. You were never broken. To help you live inside your own life again.</p>
+<section class="pad" style="text-align:center"><div class="wrap" style="max-width:820px">
+  <h1 class="mixhead">When life is <em>heavier</em> than it looks</h1>
+  <p>Integrative counselling for the part of it nobody sees. In person in Hervey Bay, in your home, and online anywhere in Australia.</p>
 </div></section>
 
 <section class="split2">
   <div class="txt-col"><div class="inner-copy">
-    <div class="mixhead">Who this is <em>for</em></div>
-    <p>People carrying anxiety that looms, sleep that doesn't restore, a body that aches without answers. A marriage ending, a diagnosis landing, a grief that has rearranged everything.</p>
-    <p>You've collected the labels, maybe a script. And still, something in you says none of it has reached the actual thing. That quiet knowing is why this page exists.</p>
+    <h2 class="mixhead">All of you is part of the <em>conversation</em></h2>
+    <p>You can be surrounded by people who love you and still be carrying this on your own.</p>
+    <p>A diagnosis that has quietly become yours to carry. Grief, loss, relationships shifting into something you didn't choose. The kind of change that leaves you in a parallel universe, while everyone else's world carries on as normal.</p>
+    <p>Here, all of it counts. Your thinking, your body, what you believe, what this has cost you and who you're becoming on the other side of it. All of it gently considered.</p>
+    <p>None of it depends on your age or your fitness. A nervous system bracing in a hospital corridor and a nervous system bracing at a desk are doing the same thing.</p>
   </div></div>
-  <div class="img-col"><img src="images/therapy-room.jpg" alt="A calm counselling room with two armchairs beneath framed watercolour artwork" style="object-position:50% 48%"></div>
+  <div class="img-col"><img loading="lazy" decoding="async" src="images/therapy-room.jpg" alt="A calm counselling room with two armchairs beneath framed watercolour artwork" style="object-position:50% 48%"></div>
 </section>
 
-<section class="pad" style="text-align:center"><div class="wrap" style="max-width:780px">
-  <div class="mixhead">How we <em>work</em></div>
-  <p>We work with the body and the story together. Some sessions are mostly talking. Some are mostly noticing... what your breath is doing, where the bracing lives, what settles you. Nothing happens without your consent, and nothing is forced. Slow is the way.</p>
-  <p>Sessions are held in person on the Fraser Coast... often walking in nature... in your home, or online across Australia.</p>
-  <p>Private fee, with NDIS and Support at Home funding streams welcome. Support at Home counselling sits under the clinical stream, which means no co-contribution for you.</p>
-  <div class="svc" style="max-width:26rem;margin:2.6rem auto 0">
-    <div class="mark"></div>
-    <h3>Session fees</h3>
-    <div class="fee">$170 per hour, or $220 for a longer 90 minute session</div>
+<section class="pad" id="body-copy" style="text-align:center"><div class="wrap" style="position:relative;z-index:1;max-width:780px">
+  <style>#body-copy p{margin-bottom:1.1rem}</style>
+  <h2 class="mixhead">Your body is not working <em>against you</em></h2>
+  <p>It's working with you, and it starts delicately: a jaw that will not unclench, a breath that is held, sleep that will not come, the niggle list getting longer... When that isn't heard, it gets louder.</p>
+  <p>I came the long way round. In a lab as a pathology scientist, years in orthopaedic theatres as clinical support. Neuroscience as my academic study. Running companies for profit. I've seen what medicine does brilliantly, and what it leaves untouched.</p>
+  <p>Neuroscience is what joins the two up. It's why I can tell you what your shoulders are doing in a waiting room, and why this is information rather than a problem.</p>
+</div></section>
+
+<section class="pad tint" id="how" style="position:relative;z-index:1;text-align:center">
+  <img loading="lazy" decoding="async" src="images/mandala.png" alt="" style="position:absolute;left:0;top:20%;transform:translateX(-40%);width:min(72vw,700px);opacity:.12;z-index:0;pointer-events:none"><div class="wrap" style="max-width:780px">
+  <h2 class="mixhead">How I <em>work</em></h2>
+  <p>This is your time. You can say the thing you haven't said out loud, and feel where it's been sitting in your body. Some weeks we start with words, some with the body, because that's where the conversation is already happening.</p>
+  <p class="forwho" style="margin-top:2rem;margin-bottom:0">What I draw on</p>
+  <ul class="morelist" style="max-width:36rem">
+    <li><strong>Acceptance and commitment therapy</strong> &middot; making room for the hard thing so your life can still move</li>
+    <li><strong>Existential work</strong> &middot; the questions with no tidy answer, taken seriously rather than solved</li>
+    <li><strong>Psychotherapy</strong> &middot; the patterns underneath, and where you learned them</li>
+    <li><strong>Yogic philosophy</strong> &middot; breath and presence as practice, not belief</li>
+    <li><strong>Neuroscience</strong> &middot; why your body does what it does, and what to do with that</li>
+  </ul>
+</div></section>
+
+<section class="pad" id="family" style="text-align:center"><div class="wrap" id="family-copy" style="max-width:780px">
+  <style>#family-copy p{margin-bottom:1.1rem}</style>
+  <h2 class="mixhead">Family <em>Counselling</em></h2>
+  <p>Sometimes the hard thing isn't inside one person. It sits between people... in what gets said, what never gets said, and the way everyone has quietly organised themselves around it.</p>
+  <p>Illness in the house. A diagnosis that rearranged the family. Grief that each of you is carrying differently. A separation. A young person who has gone quiet. Ageing parents, and the roles that shifted without anyone agreeing to them.</p>
+  <p>We work with the relationships and the nervous systems in the room together. Everyone gets heard, no one becomes the problem, and the pace stays kind. Family sessions can be held in person or online, and not everyone has to attend every time.</p>
+</div></section>
+
+<section class="pad tint" id="engage" style="text-align:center"><div class="wrap" style="max-width:820px">
+  <h2 class="mixhead">How to <em>engage</em></h2>
+  <ul class="morelist" style="max-width:36rem">
+    <li><strong><a href="private.html" style="color:var(--teal)">Private</a></strong> &middot; no Medicare or private health rebate, so no diagnosis and no referral needed</li>
+    <li><strong><a href="ndis.html" style="color:var(--teal)">NDIS</a></strong> &middot; self-managed and plan-managed participants welcome</li>
+    <li><strong><a href="support-at-home.html" style="color:var(--teal)">Support at Home</a></strong> &middot; participants welcome. Counselling sits under clinical supports, which means no participant contribution. Your sessions are fully funded under your package, at no cost to you.</li>
+  </ul>
+
+  <div class="svc-cards four" style="margin-top:3.4rem;max-width:52rem">
+    <div class="svc">
+      <div class="mark"></div>
+      <h3>Individual counselling</h3>
+      <div class="fee">50 minutes &middot; $170<br>or $220 for a longer 90 minute session</div>
+    </div>
+    <div class="svc">
+      <div class="mark"></div>
+      <h3>Family counselling</h3>
+      <div class="fee">$170 per session</div>
+    </div>
   </div>
+
+  <p class="note" style="margin-top:1.6rem">Full detail for each: <a href="private.html" style="color:var(--terracotta)">Private clients</a> &middot; <a href="ndis.html" style="color:var(--terracotta)">NDIS participants</a> &middot; <a href="support-at-home.html" style="color:var(--terracotta)">Support at Home</a></p>
+  <p style="margin-top:1.6rem;font-size:.95rem">Sessions are held in person in Hervey Bay, in your home, or online anywhere in Australia. Telehealth is the same fee as in person.</p>
+
   <div style="margin-top:2.6rem;display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap">
-  <a class="btn" href="https://mtc.splose.com/online-booking/7491d0dd-19a4-4d1a-be67-9a94d87c840a" target="_blank" rel="noopener">Book a Session</a>
-  <a class="btn ghost dark" href="contact.html">Enquire or Refer</a>
-</div>
+    <a class="btn" href="https://mtc.splose.com/online-booking/7491d0dd-19a4-4d1a-be67-9a94d87c840a" target="_blank" rel="noopener">Book a Session</a>
+    <a class="btn ghost dark" href="contact.html">Enquire or Refer</a>
+  </div>
+  <p class="note" style="margin-top:1.6rem">Or if you'd rather begin with a conversation, send me an email and tell me a little about what's going on for you. You'll hear back from me shortly.</p>
 </div></section>
 
 
-<div class="prefoot"><img src="images/waves-3.jpg" alt=""></div>
-<div class="crisis">Crisis: if you need support right now, call 000, or Lifeline on <a href="tel:131114">13 11 14</a>, any time.</div>
+<div class="crisis">This isn't a crisis service. If tonight is the hard part, Lifeline answers any hour on <a href="tel:131114">13 11 14</a>, and 13YARN is there on <a href="tel:139276">13 92 76</a> for Aboriginal and Torres Strait Islander callers. In an emergency, please call <a href="tel:000">000</a>. You don't have to wait for an appointment to reach for support.</div>
 <footer>
   <div class="foot-inner">
     <img src="images/logo-light.png" alt="More Than Counselling">
-    <div class="foot-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="counselling.html">Counselling</a><a href="yoga.html">Yoga</a><a href="contact.html">Contact</a></div>
-    <div class="foot-copy"><a href="mailto:admin@morethancounselling.com" style="color:var(--blush);text-decoration:none">admin@morethancounselling.com</a><br>Integrative somatic counselling and yoga &middot; Fraser Coast and online across Australia</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="counselling.html">Counselling</a><a href="yoga.html">Yoga</a><a href="private.html">Private</a><a href="ndis.html">NDIS</a><a href="support-at-home.html">Support at Home</a><a href="contact.html">Contact</a></div>
+    <div class="foot-copy"><a href="mailto:admin@morethancounselling.com" style="color:var(--blush);text-decoration:none">admin@morethancounselling.com</a><br>Integrative somatic counselling and yoga &middot; Hervey Bay, in home, and online across Australia</div>
   </div>
   <div style="max-width:1120px;margin:1.6rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(245,237,230,.25);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;font-size:.78rem;opacity:.85">
     <span>&copy; 2026 More Than Counselling &middot; All rights reserved</span>
     <span><a href="privacy.html" style="color:var(--cream);text-decoration:none">Privacy</a> &middot; <a href="terms.html" style="color:var(--cream);text-decoration:none">Terms</a> &middot; <a href="informed-consent.html" style="color:var(--cream);text-decoration:none">Informed Consent</a> &middot; <a href="cancellation.html" style="color:var(--cream);text-decoration:none">Cancellations &amp; Refunds</a> &middot; <a href="referrals-fees.html" style="color:var(--cream);text-decoration:none">Referrals &amp; Fees</a></span>
   </div>
 </footer>
+<script>
+(function(){var n=document.querySelector('.ibar');if(!n)return;
+ function sc(){n.classList.toggle('scrolled',window.scrollY>40);}
+ sc();window.addEventListener('scroll',sc,{passive:true});
+ var t=n.querySelector('.navtoggle');if(!t)return;
+ t.addEventListener('click',function(){var o=n.classList.toggle('open');
+  t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');});
+ n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){
+  n.classList.remove('open');t.setAttribute('aria-expanded','false');});});})();
+</script>
 </body>
 </html>

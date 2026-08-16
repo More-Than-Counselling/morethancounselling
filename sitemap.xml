@@ -1,74 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://www.morethancounselling.com/</loc>
+    <lastmod>2026-08-16</lastmod>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://www.morethancounselling.com/about.html</loc>
+    <lastmod>2026-08-16</lastmod>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://www.morethancounselling.com/services.html</loc>
+    <loc>https://www.morethancounselling.com/counselling.html</loc>
+    <lastmod>2026-08-16</lastmod>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://www.morethancounselling.com/service-counselling.html</loc>
+    <loc>https://www.morethancounselling.com/yoga.html</loc>
+    <lastmod>2026-08-16</lastmod>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://www.morethancounselling.com/service-yoga.html</loc>
+    <loc>https://www.morethancounselling.com/private.html</loc>
+    <lastmod>2026-08-16</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://www.morethancounselling.com/service-breathwork.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.morethancounselling.com/service-ndis.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.morethancounselling.com/service-workshops.html</loc>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://www.morethancounselling.com/ndis.html</loc>
+    <lastmod>2026-08-16</lastmod>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://www.morethancounselling.com/support-at-home.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.morethancounselling.com/contact.html</loc>
+    <lastmod>2026-08-16</lastmod>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://www.morethancounselling.com/legals.html</loc>
-    <priority>0.3</priority>
+    <loc>https://www.morethancounselling.com/referrals-fees.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://www.morethancounselling.com/privacy-policy.html</loc>
-    <priority>0.3</priority>
+    <loc>https://www.morethancounselling.com/privacy.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <priority>0.5</priority>
   </url>
-
+  <url>
+    <loc>https://www.morethancounselling.com/terms.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <priority>0.5</priority>
+  </url>
   <url>
     <loc>https://www.morethancounselling.com/informed-consent.html</loc>
-    <priority>0.3</priority>
+    <lastmod>2026-08-16</lastmod>
+    <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://www.morethancounselling.com/cancellation-refund-policy.html</loc>
-    <priority>0.3</priority>
+    <loc>https://www.morethancounselling.com/cancellation.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <priority>0.5</priority>
   </url>
-
 </urlset>

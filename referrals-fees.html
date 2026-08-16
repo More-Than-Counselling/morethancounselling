@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
 <meta name="color-scheme" content="light only">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Referrals & Fees | More Than Counselling</title>
-<meta name="description" content="Session pricing, NDIS billing, rebates, and how referrals work.">
+<title>Referrals and Fees | More Than Counselling, Hervey Bay</title>
+<meta name="description" content="Session pricing, NDIS and Support at Home billing, and how referrals work at More Than Counselling.">
+<link rel="canonical" href="https://www.morethancounselling.com/referrals-fees.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Fionna Findley">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Hervey Bay">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="More Than Counselling">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="Referrals and Fees | More Than Counselling, Hervey Bay">
+<meta property="og:description" content="Session pricing, NDIS and Support at Home billing, and how referrals work at More Than Counselling.">
+<meta property="og:url" content="https://www.morethancounselling.com/referrals-fees.html">
+<meta property="og:image" content="https://www.morethancounselling.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="More Than Counselling, integrative somatic counselling and yoga in Hervey Bay">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Referrals and Fees | More Than Counselling, Hervey Bay">
+<meta name="twitter:description" content="Session pricing, NDIS and Support at Home billing, and how referrals work at More Than Counselling.">
+<meta name="twitter:image" content="https://www.morethancounselling.com/images/og-cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light only;--teal:#2A4A5E;--terracotta:#C4622D;--charcoal:#2C2825;--cream:#F5EDE6;--blush:#F0DCCE;--rosewood:#B77E63;--tealsoft:rgba(42,74,94,.08)}
+:root{color-scheme:light only;--teal:#2A4A5E;--terracotta:#C4622D;--charcoal:#2C2825;--cream:#F5EDE6;--blush:#F0DCCE;--rosewood:#B77E63;--tealsoft:rgba(42,74,94,.08);--cta:#2A4A5E;--active:#F2C9A8}  /* --cta: deep teal #2A4A5E  ·  eucalypt was #5E7A72 */
 *{margin:0;padding:0;box-sizing:border-box}
-html{background:#FAF3EA;font-size:17.5px}
-body{background:#FAF3EA url('images/paper-bg.jpg') center top / cover fixed;color:var(--charcoal);font-family:'Jost',sans-serif;font-weight:300;line-height:1.78;font-size:1.08rem}
+html{background:#FCF9F5;font-size:17.5px;scroll-behavior:smooth}
+[id]{scroll-margin-top:96px}
+body{background:#FCF9F5 url('images/linen.png') center top / 240px 240px repeat fixed;color:var(--charcoal);font-family:'Jost',sans-serif;font-weight:300;line-height:1.78;font-size:1.08rem}
 h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--teal);line-height:1.18}
 img{display:block;max-width:100%}
-.btn{display:inline-block;background:var(--terracotta);color:#fff;text-decoration:none;padding:.8rem 2.2rem;
+.btn{display:inline-block;background:var(--cta);color:#fff;text-decoration:none;padding:.8rem 2.2rem;
   letter-spacing:.12em;text-transform:uppercase;font-size:.83rem;font-weight:400;border-radius:999px}
 .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.85)}
 .btn.ghost.dark{color:var(--teal);border-color:var(--teal)}
 .btn.small{padding:.55rem 1.5rem;font-size:.78rem}
+.note{font-size:.93rem;color:var(--rosewood)}
+/* buttons invert to cream on the dark bands, so they never vanish */
+.ibar .links a.btn,
+.statement .btn{background:var(--cream);color:var(--cta)}
+.statement .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.85)}
 
 /* nav over hero */
 .hero{position:relative;min-height:82vh;display:flex;flex-direction:column}
@@ -39,22 +66,25 @@ nav .logo img{height:56px}
 @media(max-width:640px){.hero{min-height:88vh}.hero-copy{margin-left:0;margin-bottom:3rem}}
 
 .wrap{max-width:1120px;margin:0 auto;padding:0 2rem}
-section.pad{padding:9.5rem 0}
+section.pad{padding:6.5rem 0}
+@media(max-width:640px){section.pad{padding:4rem 0}}
+/* section rhythm: a barely-there blush band, applied by hand where it helps */
+section.pad.tint{background:rgba(240,220,206,.15)}
 
 /* mixed-case headings: spaced caps with italic serif accents */
 .mixhead{font-family:'Jost',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.2em;
   color:var(--teal);font-size:clamp(1rem,2.1vw,1.4rem);line-height:2;margin-bottom:1.2rem}
 .mixhead em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;text-transform:none;
-  letter-spacing:.01em;color:var(--terracotta);font-size:1.9em;line-height:1;vertical-align:-.1em}
+  letter-spacing:.01em;color:var(--terracotta);font-size:1.9em;line-height:1;vertical-align:baseline}
 
 /* the > list... the same > that forms the path through the logo */
 .morelist{list-style:none;max-width:33rem;margin:1.8rem auto;text-align:left}
-.morelist li{position:relative;padding-left:2.3rem;margin-bottom:.7rem;font-size:1.05rem}
-.morelist li::before{content:'';background:url('images/mandala.png') center/contain no-repeat;
-  width:1.35em;height:1.35em;position:absolute;left:0;top:.28em}
+.morelist li{position:relative;padding-left:1.9rem;margin-bottom:.7rem;font-size:1.05rem}
+.morelist li::before{content:'>';color:var(--terracotta);font-family:'Jost',sans-serif;
+  font-weight:500;font-size:1.02em;position:absolute;left:.35rem;top:0;line-height:inherit}
 
 /* marquee band */
-.marquee{background:linear-gradient(#C4622D,#B65826);overflow:hidden;padding:2.6rem 0;white-space:nowrap}
+.marquee{background:linear-gradient(#B77E63,#A96F56);overflow:hidden;padding:2.6rem 0;white-space:nowrap}
 .marquee .track{display:inline-block;animation:mq 30s linear infinite}
 .marquee span.t{color:#FAF0E6;font-family:'Jost',sans-serif;font-weight:400;text-transform:uppercase;
   letter-spacing:.22em;font-size:clamp(.8rem,1.5vw,.98rem);margin:0 1.2rem}
@@ -80,13 +110,13 @@ section.pad{padding:9.5rem 0}
 
 /* outcomes bullets */
 .outcomes ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.4rem 3.5rem;max-width:60rem;margin:0 auto}
-.outcomes li{padding-left:1.9rem;position:relative;margin-bottom:.7rem}
-.outcomes li::before{content:'';background:url('images/mandala.png') center/contain no-repeat;
-  width:1.3em;height:1.3em;position:absolute;left:0;top:.3em}
+.outcomes li{padding-left:1.7rem;position:relative;margin-bottom:.7rem;text-align:left}
+.outcomes li::before{content:'>';color:var(--terracotta);font-family:'Jost',sans-serif;
+  font-weight:500;position:absolute;left:.2rem;top:0;line-height:inherit}
 @media(max-width:760px){.outcomes ul{grid-template-columns:1fr}}
 
 /* statement band */
-.statement{background:linear-gradient(#B77E63,#A96F56);text-align:center;padding:7.5rem 2rem;color:#fff}
+.statement{background:linear-gradient(#B77E63,#A96F56);text-align:center;padding:6.5rem 2rem;color:#fff}
 .statement h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.8rem);max-width:34ch;margin:0 auto .6rem}
 
 /* waves motif */
@@ -96,21 +126,19 @@ section.pad{padding:9.5rem 0}
 .outcomes .wavbg{position:absolute;left:0;right:0;bottom:0;z-index:0}
 .outcomes .wavbg img{width:100%;display:block}
 .outcomes .wrap{position:relative;z-index:1}
-.prefoot{line-height:0}
-.prefoot img{width:100%;display:block}
 
 /* full-column split */
 .split2{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
 .split2 .img-col{min-height:480px}
 .split2 .img-col img{width:100%;height:100%;object-fit:cover;display:block}
-.split2 .txt-col{padding:8rem 4.5rem;display:flex;flex-direction:column;justify-content:center}
+.split2 .txt-col{padding:6.5rem 4.5rem;display:flex;flex-direction:column;justify-content:center}
 .split2 .txt-col .inner-copy{max-width:34rem;margin:0 auto}
 .split2 p{margin-bottom:1rem}
 @media(min-width:861px){.about{min-height:720px}}
 @media(min-width:1080px){.about{height:780px}}
 /* service cards */
 .svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;align-items:stretch}
-.svc{background:rgba(255,253,250,.85);border:1px solid #E7DBC9;border-radius:16px;padding:2.6rem 2rem;text-align:center;display:flex;flex-direction:column}
+.svc{background:#fff;border:1px solid #EFE6DA;box-shadow:0 1px 3px rgba(44,40,37,.05);border-radius:16px;padding:2.6rem 2rem;text-align:center;display:flex;flex-direction:column}
 .svc .mark{margin:0 auto 1.2rem;width:52px;height:52px;background:url('images/mandala.png') center/contain no-repeat}
 .svc h3{font-size:1.5rem;margin-bottom:.8rem}
 .svc p{font-size:.98rem;margin-bottom:1rem}
@@ -139,10 +167,42 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 .foot-links a{color:var(--cream);text-decoration:none;text-transform:uppercase}
 .foot-copy{font-size:.82rem;opacity:.75;max-width:34ch;line-height:1.7}
 </style>
-<style>.ibar{background:var(--teal);padding:1.1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+<style>.ibar{background:var(--teal);padding:1.1rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;position:sticky;top:0;z-index:60;box-shadow:0 2px 18px rgba(44,40,37,.14)}
+
+/* mobile menu button */
+.navtoggle{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px;padding:9px 6px}
+.navtoggle span{display:block;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .2s ease}
+.navtoggle span+span{margin-top:6px}
+.open .navtoggle span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.open .navtoggle span:nth-child(2){opacity:0}
+.open .navtoggle span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(prefers-reduced-motion:reduce){.navtoggle span{transition:none}}
+
 .ibar .links{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
 .ibar .links a{color:var(--cream);text-decoration:none;text-transform:uppercase;font-size:.82rem;letter-spacing:.12em}
-.legal{max-width:780px;margin:0 auto;padding:5rem 2rem 7rem}
+@media(max-width:860px){
+  .ibar{position:sticky}
+  .navtoggle{display:block}
+  .ibar .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+    align-items:flex-start;gap:.1rem;background:rgba(42,74,94,.98);padding:1rem 2rem 1.5rem;
+    box-shadow:0 12px 24px rgba(44,40,37,.2)}
+  .ibar.open .links{display:flex}
+  .ibar .links a{padding:.6rem 0;font-size:.9rem}
+  .ibar .links a.btn{margin-top:.6rem}
+  .ibar.scrolled .links{background:rgba(250,243,234,.98);box-shadow:0 12px 24px rgba(44,40,37,.14)}
+}
+/* scrolled: bar goes transparent over the paper, type flips to teal to stay legible */
+.ibar .logo-wrap{position:relative;display:block;line-height:0}
+.ibar .logo-wrap img{transition:opacity .3s ease}
+.ibar .dark-logo{position:absolute;left:0;top:0;opacity:0}
+.ibar.scrolled{background:rgba(250,243,234,.48);box-shadow:none;border-bottom:1px solid rgba(42,74,94,.08);
+  -webkit-backdrop-filter:blur(24px) saturate(1.2);backdrop-filter:blur(24px) saturate(1.2)}
+.ibar.scrolled .light-logo{opacity:0}
+.ibar.scrolled .dark-logo{opacity:1}
+.ibar.scrolled .links a{color:var(--teal)}
+.ibar.scrolled .links a.btn{background:var(--cta);color:#fff}
+.ibar.scrolled .navtoggle span{background:var(--teal)}
+.legal{max-width:780px;margin:0 auto;padding:6.5rem 2rem}
 .legal .eyebrow{font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;color:var(--terracotta);text-align:center;margin-bottom:.8rem}
 .legal h1{font-style:italic;font-weight:500;font-size:clamp(2rem,3.6vw,2.7rem);text-align:center;margin-bottom:.6rem}
 .legal .lede{text-align:center;color:var(--rosewood);font-size:.95rem;margin-bottom:3.4rem}
@@ -150,13 +210,14 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 .legal p{margin-bottom:1rem}
 .legal ul{list-style:none;margin:0 0 1rem;padding:0}
 .legal li{position:relative;padding-left:1.5rem;margin-bottom:.45rem}
-.legal li::before{content:'';background:url('images/mandala.png') center/contain no-repeat;width:.95em;height:.95em;position:absolute;left:0;top:.4em}
+.legal li::before{content:'>';color:var(--terracotta);font-family:'Jost',sans-serif;font-weight:500;position:absolute;left:.15rem;top:0;line-height:inherit}
 .legal .fine{font-size:.88rem;color:var(--rosewood);margin-top:3rem;text-align:center}</style>
 </head>
 <body>
 <div class="ibar">
-  <a href="index.html"><img src="images/logo-light.png" alt="More Than Counselling" style="height:52px"></a>
-  <div class="links">
+  <a class="logo-wrap" href="index.html"><img class="light-logo" src="images/logo-light.png" alt="More Than Counselling" style="height:52px"><img class="dark-logo" src="images/logo-dark.png" alt="" style="height:52px"></a>
+  <button class="navtoggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <div class="links" id="menu">
     <a href="index.html">Home</a><a href="about.html">About</a><a href="counselling.html">Counselling</a><a href="yoga.html">Yoga</a><a href="contact.html">Contact</a>
     <a class="btn small" href="https://mtc.splose.com/online-booking/7491d0dd-19a4-4d1a-be67-9a94d87c840a" target="_blank" rel="noopener">Book now</a>
   </div>
@@ -164,37 +225,51 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 <div class="legal">
 <div class="eyebrow">The Formal Stuff</div>
 <h1>Referrals &amp; Fees</h1>
-<p class="lede">Session pricing, NDIS billing, rebates, and how referrals work at More Than Counselling.</p>
+<p class="lede">Session pricing, NDIS and Support at Home billing, and how referrals work at More Than Counselling.</p>
 <h2>Referrals</h2>
-<p>You can refer yourself... no GP referral is required to begin. Professionals such as GPs or specialists are welcome to contact Fionna on your behalf, with your consent. A GP referral becomes useful if you are pursuing private health insurance rebates or NDIS-funded support.</p>
+<p>You can refer yourself... no GP referral is required to begin. Professionals such as GPs or specialists are welcome to contact Fionna on your behalf, with your consent. A GP referral is not required for NDIS or Support at Home funded work either, though your care team is welcome to be involved with your consent.</p>
 <h2>Session fees</h2>
 <ul>
-<li><strong>Integrative Somatic Counselling:</strong> $170 per hour, or $220 for a longer 90 minute session (in person or via telehealth)</li>
+<li><strong>Integrative Somatic Counselling:</strong> 50 minutes &middot; $170, or $220 for a longer 90 minute session (in person or via telehealth)</li>
+<li><strong>Family Counselling:</strong> $170 per session (in person or via telehealth)</li>
 <li><strong>Integrative Yoga &middot; private sessions:</strong> $170 per hour, discounted for class students</li>
-<li><strong>The Friday Class:</strong> House of Habits Studio, Torquay &middot; Fridays 10&ndash;11am &middot; $15</li>
+<li><strong>The Friday Class:</strong> House of Habits, Witt Street, Torquay &middot; Fridays 10 to 11am &middot; $15</li>
 </ul>
-<p>Telehealth sessions are the same fee as in-person appointments. Concession pricing may be available in certain circumstances &middot; please ask.</p>
+<p>Telehealth sessions are the same fee as in-person appointments. A small number of concession places are held for private clients, so cost is never the barrier to beginning &middot; spots are limited and they do turn over, so it is always worth asking.</p>
 <h2>NDIS</h2>
-<p>More Than Counselling welcomes NDIS participants who are plan managed or self-managed. Services generally fall under Improved Daily Living or Improved Health and Wellbeing categories. A service agreement is completed before sessions begin, and invoices follow current NDIS pricing guidelines. Agency-managed participants are encouraged to make contact to discuss options. Support at Home funding streams are also welcome.</p>
+<p>More Than Counselling welcomes NDIS participants who are plan managed or self-managed. Counselling is a Capacity Building support. A service agreement is completed before sessions begin, and invoices follow the current NDIS pricing arrangements. Agency-managed participants are encouraged to make contact to discuss options. Support at Home funding streams are also welcome. Full detail on the <a href="ndis.html">NDIS page</a>.</p>
 <h2>Support at Home</h2>
-<p>More Than Counselling proudly services Support at Home packages, with counselling delivered under the clinical stream. Clinical services attract no co-contribution... your counselling is fully funded under your package, at no cost to you. Invoices are issued in line with current Support at Home guidelines.</p>
-<h2>Private health insurance</h2>
-<p>Rebates depend on your level of cover and your fund. Please contact your insurer directly to confirm your entitlements before your first session. You pay the full fee upfront and receive a receipt for claiming any rebate.</p>
+<p>More Than Counselling proudly services Support at Home packages, with counselling delivered under the clinical stream. Clinical services attract no co-contribution... your counselling is fully funded under your package, at no cost to you. Invoices are issued in line with current Support at Home guidelines. Referrer detail, indications and the indirect activity rate are on the <a href="support-at-home.html">Support at Home page</a>.</p>
+<h2>Private clients</h2>
+<p>No Medicare rebate and no private health rebate applies, which means no diagnosis and no referral is needed to begin. Fees and payment detail are on the <a href="private.html">Private clients page</a>.</p>
+<h2>Rebates</h2>
+<p>There are no rebates on private sessions. Counselling here is not claimable through Medicare and is not claimable through private health funds. The fee listed above is the full and final cost, and no provider number, referral or diagnosis is needed to begin.</p>
+<p>Funded pathways are the exception: NDIS and Support at Home participants are billed to their funding rather than paying privately. See the sections above.</p>
 <h2>Payment</h2>
 <p>Payment is made at booking via credit or debit card, or by bank transfer. NDIS participants are invoiced in line with NDIS guidelines instead.</p>
 <p class="fine">Practitioner: Fionna Findley &middot; More Than Counselling, Australia</p>
 </div>
-<div class="crisis">Crisis: if you need support right now, call 000, or Lifeline on <a href="tel:131114">13 11 14</a>, any time.</div>
+<div class="crisis">This isn't a crisis service. If tonight is the hard part, Lifeline answers any hour on <a href="tel:131114">13 11 14</a>, and 13YARN is there on <a href="tel:139276">13 92 76</a> for Aboriginal and Torres Strait Islander callers. In an emergency, please call <a href="tel:000">000</a>. You don't have to wait for an appointment to reach for support.</div>
 <footer>
   <div class="foot-inner">
     <img src="images/logo-light.png" alt="More Than Counselling">
-    <div class="foot-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="counselling.html">Counselling</a><a href="yoga.html">Yoga</a><a href="contact.html">Contact</a></div>
-    <div class="foot-copy"><a href="mailto:admin@morethancounselling.com" style="color:var(--blush);text-decoration:none">admin@morethancounselling.com</a><br>Integrative somatic counselling and yoga &middot; Fraser Coast and online across Australia</div>
+    <div class="foot-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="counselling.html">Counselling</a><a href="yoga.html">Yoga</a><a href="private.html">Private</a><a href="ndis.html">NDIS</a><a href="support-at-home.html">Support at Home</a><a href="contact.html">Contact</a></div>
+    <div class="foot-copy"><a href="mailto:admin@morethancounselling.com" style="color:var(--blush);text-decoration:none">admin@morethancounselling.com</a><br>Integrative somatic counselling and yoga &middot; Hervey Bay, in home, and online across Australia</div>
   </div>
   <div style="max-width:1120px;margin:1.6rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(245,237,230,.25);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;font-size:.78rem;opacity:.85">
     <span>&copy; 2026 More Than Counselling &middot; All rights reserved</span>
     <span><a href="privacy.html" style="color:var(--cream);text-decoration:none">Privacy</a> &middot; <a href="terms.html" style="color:var(--cream);text-decoration:none">Terms</a> &middot; <a href="informed-consent.html" style="color:var(--cream);text-decoration:none">Informed Consent</a> &middot; <a href="cancellation.html" style="color:var(--cream);text-decoration:none">Cancellations &amp; Refunds</a> &middot; <a href="referrals-fees.html" style="color:var(--cream);text-decoration:none">Referrals &amp; Fees</a></span>
   </div>
 </footer>
+<script>
+(function(){var n=document.querySelector('.ibar');if(!n)return;
+ function sc(){n.classList.toggle('scrolled',window.scrollY>40);}
+ sc();window.addEventListener('scroll',sc,{passive:true});
+ var t=n.querySelector('.navtoggle');if(!t)return;
+ t.addEventListener('click',function(){var o=n.classList.toggle('open');
+  t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');});
+ n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){
+  n.classList.remove('open');t.setAttribute('aria-expanded','false');});});})();
+</script>
 </body>
 </html>

@@ -1,6 +1,61 @@
-# Netlify config for More Than Counselling — plain static site, no build step.
+# Netlify config for More Than Counselling. Plain static site, no build step.
 [build]
   publish = "."
+
+# Clean URLs without the .html, so the links printed on the brochures work.
+# The trifold sends people to morethancounselling.com/contact and /yoga.
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+[[redirects]]
+  from = "/yoga"
+  to = "/yoga.html"
+  status = 200
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+[[redirects]]
+  from = "/counselling"
+  to = "/counselling.html"
+  status = 200
+[[redirects]]
+  from = "/private"
+  to = "/private.html"
+  status = 200
+[[redirects]]
+  from = "/ndis"
+  to = "/ndis.html"
+  status = 200
+[[redirects]]
+  from = "/support-at-home"
+  to = "/support-at-home.html"
+  status = 200
+[[redirects]]
+  from = "/fees"
+  to = "/referrals-fees.html"
+  status = 200
+[[redirects]]
+  from = "/referrals-fees"
+  to = "/referrals-fees.html"
+  status = 200
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+[[redirects]]
+  from = "/informed-consent"
+  to = "/informed-consent.html"
+  status = 200
+[[redirects]]
+  from = "/cancellation"
+  to = "/cancellation.html"
+  status = 200
 
 [[headers]]
   for = "/*"

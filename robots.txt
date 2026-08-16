@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://morethancounselling.com/sitemap.xml
+
+Sitemap: https://www.morethancounselling.com/sitemap.xml
