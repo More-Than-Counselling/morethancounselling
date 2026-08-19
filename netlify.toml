@@ -2,60 +2,104 @@
 [build]
   publish = "."
 
-# Clean URLs without the .html, so the links printed on the brochures work.
-# The trifold sends people to morethancounselling.com/contact and /yoga.
+# ---------------------------------------------------------------------------
+# 301 redirects: OLD site URLs that Google has indexed, mapped to their
+# current equivalents so the authority they carry transfers across.
+# First match wins, so these specific old paths sit above the general rules.
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "/referrals-and-fees"
+  to = "/referrals-fees.html"
+  status = 301
+[[redirects]]
+  from = "/terms-and-conditions"
+  to = "/terms.html"
+  status = 301
+[[redirects]]
+  from = "/service-yoga"
+  to = "/yoga.html"
+  status = 301
+[[redirects]]
+  from = "/service-ndis.html"
+  to = "/ndis.html"
+  status = 301
+[[redirects]]
+  from = "/service-ndis"
+  to = "/ndis.html"
+  status = 301
+[[redirects]]
+  from = "/service-counselling"
+  to = "/counselling.html"
+  status = 301
+[[redirects]]
+  from = "/service-counselling.html"
+  to = "/counselling.html"
+  status = 301
+[[redirects]]
+  from = "/services"
+  to = "/#work"
+  status = 301
+
+# ---------------------------------------------------------------------------
+# Clean extensionless URLs -> canonical .html pages, as 301s.
+# These cover the printed brochure QR links (/contact, /yoga) and the old
+# extensionless pages Google indexed (/terms, /privacy, /referrals-fees,
+# /cancellation). 301 rather than 200 so Google consolidates onto the .html
+# canonicals listed in sitemap.xml; browsers follow the hop invisibly, so
+# the printed QR codes keep working.
+# ---------------------------------------------------------------------------
 [[redirects]]
   from = "/contact"
   to = "/contact.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/yoga"
   to = "/yoga.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/about"
   to = "/about.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/counselling"
   to = "/counselling.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/private"
   to = "/private.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/ndis"
   to = "/ndis.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/support-at-home"
   to = "/support-at-home.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/fees"
   to = "/referrals-fees.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/referrals-fees"
   to = "/referrals-fees.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/privacy"
   to = "/privacy.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/terms"
   to = "/terms.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/informed-consent"
   to = "/informed-consent.html"
-  status = 200
+  status = 301
 [[redirects]]
   from = "/cancellation"
   to = "/cancellation.html"
-  status = 200
+  status = 301
 
 [[headers]]
   for = "/*"

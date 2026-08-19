@@ -32,7 +32,8 @@
 <style>
 :root{color-scheme:light only;--teal:#2A4A5E;--terracotta:#C4622D;--charcoal:#2C2825;--cream:#F5EDE6;--blush:#F0DCCE;--rosewood:#B77E63;--tealsoft:rgba(42,74,94,.08);--cta:#2A4A5E;--active:#F2C9A8}  /* --cta: deep teal #2A4A5E  ·  eucalypt was #5E7A72 */
 *{margin:0;padding:0;box-sizing:border-box}
-html{background:#FCF9F5;font-size:17.5px;scroll-behavior:smooth}
+html{background:#FCF9F5;font-size:19px;scroll-behavior:smooth}
+@media(max-width:640px){html{font-size:17.5px}}
 [id]{scroll-margin-top:96px}
 body{background:#FCF9F5 url('images/linen.png') center top / 240px 240px repeat fixed;color:var(--charcoal);font-family:'Jost',sans-serif;font-weight:300;line-height:1.78;font-size:1.08rem}
 h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--teal);line-height:1.18}
@@ -162,9 +163,12 @@ section.pad.tint{background:rgba(240,220,206,.15)}
 .crisis{text-align:center;padding:3.8rem 2rem;font-size:.98rem}
 .crisis a{color:var(--terracotta)}
 footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
-.foot-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.foot-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap}
+.foot-left{display:flex;flex-direction:column;gap:1.3rem;align-items:flex-start}
+.foot-left img{width:auto}
 .foot-inner img{height:60px}
-.foot-links{display:flex;gap:1.4rem;font-size:.85rem;letter-spacing:.06em;flex-wrap:wrap}
+.foot-links{display:grid;grid-template-columns:auto;gap:.55rem;font-size:.82rem;letter-spacing:.06em;justify-content:end;justify-items:end;text-align:right}
+@media(max-width:640px){.foot-links{justify-content:start;justify-items:start;text-align:left}}
 .foot-links a{color:var(--cream);text-decoration:none;text-transform:uppercase}
 .foot-copy{font-size:.82rem;opacity:.75;max-width:34ch;line-height:1.7}
 
@@ -294,9 +298,11 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 <div class="crisis">This isn't a crisis service. If tonight is the hard part, Lifeline answers any hour on <a href="tel:131114">13 11 14</a>, and 13YARN is there on <a href="tel:139276">13 92 76</a> for Aboriginal and Torres Strait Islander callers. In an emergency, please call <a href="tel:000">000</a>. You don't have to wait for an appointment to reach for support.</div>
 <footer>
   <div class="foot-inner">
-    <img src="images/logo-light.png" alt="More Than Counselling">
+    <div class="foot-left">
+      <img src="images/logo-light.png" alt="More Than Counselling">
+      <div class="foot-copy"><a href="mailto:admin@morethancounselling.com" style="color:var(--blush);text-decoration:none">admin@morethancounselling.com</a><br>Integrative somatic counselling and yoga &middot; Hervey Bay, in home, and online across Australia</div>
+    </div>
     <div class="foot-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="counselling.html">Counselling</a><a href="yoga.html">Yoga</a><a href="private.html">Private</a><a href="ndis.html">NDIS</a><a href="support-at-home.html">Support at Home</a><a href="contact.html">Contact</a></div>
-    <div class="foot-copy"><a href="mailto:admin@morethancounselling.com" style="color:var(--blush);text-decoration:none">admin@morethancounselling.com</a><br>Integrative somatic counselling and yoga &middot; Hervey Bay, in home, and online across Australia</div>
   </div>
   <div style="max-width:1120px;margin:1.6rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(245,237,230,.25);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;font-size:.78rem;opacity:.85">
     <span>&copy; 2026 More Than Counselling &middot; All rights reserved</span>
