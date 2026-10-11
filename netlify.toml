@@ -57,6 +57,10 @@
   to = "/yoga.html"
   status = 301
 [[redirects]]
+  from = "/grief-garden"
+  to = "/grief-garden.html"
+  status = 301
+[[redirects]]
   from = "/about"
   to = "/about.html"
   status = 301
