@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NVN79L63"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="color-scheme" content="light only">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Grief Garden | Yoga for Grief, Hervey Bay</title>
-<meta name="description" content="A two-hour mini retreat to tend your grief through gentle yoga, breath and rest. Sunday 1 November 2026, 10am to 12pm, House of Habits, Hervey Bay. $20, proceeds to our local hospice.">
+<meta name="description" content="A two-hour mini retreat to tend your grief through gentle yoga, breath and rest. Join the waitlist for the next session in Hervey Bay.">
 <link rel="canonical" href="https://www.morethancounselling.com/grief-garden.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="Fionna Findley">
@@ -15,7 +23,7 @@
 <meta property="og:site_name" content="More Than Counselling">
 <meta property="og:locale" content="en_AU">
 <meta property="og:title" content="The Grief Garden | Yoga for Grief, Hervey Bay">
-<meta property="og:description" content="A two-hour mini retreat to tend your grief through gentle yoga, breath and rest. Sunday 1 November 2026, 10am to 12pm, House of Habits, Hervey Bay. $20, proceeds to our local hospice.">
+<meta property="og:description" content="A two-hour mini retreat to tend your grief through gentle yoga, breath and rest. Join the waitlist for the next session in Hervey Bay.">
 <meta property="og:url" content="https://www.morethancounselling.com/grief-garden.html">
 <meta property="og:image" content="https://www.morethancounselling.com/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,7 +31,7 @@
 <meta property="og:image:alt" content="More Than Counselling, integrative somatic counselling and yoga in Hervey Bay">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Grief Garden | Yoga for Grief, Hervey Bay">
-<meta name="twitter:description" content="A two-hour mini retreat to tend your grief through gentle yoga, breath and rest. Sunday 1 November 2026, 10am to 12pm, House of Habits, Hervey Bay. $20, proceeds to our local hospice.">
+<meta name="twitter:description" content="A two-hour mini retreat to tend your grief through gentle yoga, breath and rest. Join the waitlist for the next session in Hervey Bay.">
 <meta name="twitter:image" content="https://www.morethancounselling.com/images/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,6 +186,10 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 .spec .v{flex:1;font-size:1rem}
 @media(max-width:600px){.spec .row{flex-direction:column;gap:.2rem}.spec .k{flex:none}}
 /* quiet callout */
+.wl{max-width:30rem;margin:2rem auto 0;display:flex;flex-direction:column;gap:.8rem;text-align:left}
+.wl input[type=text],.wl input[type=email]{font:inherit;font-size:1rem;padding:.75rem 1rem;border:1px solid #E3D6CB;border-radius:10px;background:#fff;color:var(--charcoal)}
+.wl .btn{align-self:center;border:0;cursor:pointer;margin-top:.4rem}
+.wl-done{max-width:30rem;margin:2rem auto 0;padding:1.4rem 1.6rem;border-radius:14px;background:rgba(240,220,206,.45);text-align:center}
 .callout{max-width:36rem;margin:2.6rem auto 0;text-align:left;background:rgba(240,220,206,.28);
   border-left:3px solid var(--terracotta);padding:1.4rem 1.6rem;font-size:.98rem}
 /* audience marker */
@@ -241,13 +253,24 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 
 
 <section class="pad" style="text-align:center"><div class="wrap" style="max-width:820px">
-  <div class="forwho">A two-hour mini retreat &middot; Sunday 1 November</div>
+  <div class="forwho">A two-hour mini retreat</div>
   <h1 class="mixhead">The Grief <em>Garden</em></h1>
   <p>A gentle space to tend your grief through yoga, breath and rest.</p>
-  <p class="note" style="margin-top:1rem">Sunday 1 November 2026 &middot; 10am to 12pm &middot; House of Habits, Hervey Bay<br>$20 &middot; limited to 20 places &middot; proceeds donated to our local hospice</p>
-  <div style="margin-top:2rem;display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap">
-    <a class="btn" href="https://mtc.splose.com/online-booking/0d0882b6-79dd-407c-867c-73751ddba4ab" target="_blank" rel="noopener">Book your place</a>
-    <a class="btn ghost dark" href="contact.html">Enquire</a>
+  <p class="note" style="margin-top:1rem">Last held Sunday 1 November 2026 at House of Habits, Hervey Bay, with proceeds donated to our local hospice.<br>The next date is coming soon.</p>
+  <div id="waitlist">
+  <form class="wl" name="grief-garden-waitlist" method="POST" action="/grief-garden.html?joined=1#waitlist" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="grief-garden-waitlist">
+    <p style="display:none"><label>Leave this empty <input name="bot-field"></label></p>
+    <input type="text" name="name" placeholder="Your first name" autocomplete="given-name" aria-label="Your first name" required>
+    <input type="email" name="email" placeholder="Your email" autocomplete="email" aria-label="Your email" required>
+    <button class="btn" type="submit">Join the waitlist</button>
+    <p class="note" style="text-align:center;font-size:.85rem">Your details are used only to let you know when the next Grief Garden is on. <a href="privacy.html" style="color:var(--rosewood)">Privacy</a></p>
+  </form>
+  <div class="wl-done" hidden>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--teal);margin-bottom:.4rem">You're on the list</p>
+    <p>I'll be in touch as soon as the next Grief Garden date is set. Thank you for wanting to be part of it.</p>
+    <p class="note" style="margin-top:.6rem">Fionna</p>
+  </div>
   </div>
 </div></section>
 
@@ -311,7 +334,7 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
   <div class="txt-col"><div class="inner-copy">
   <h2 class="mixhead">The <em>details</em></h2>
   <div class="spec" style="margin-left:0">
-    <div class="row"><div class="k">When</div><div class="v">Sunday 1 November 2026 &middot; 10am to 12pm</div></div>
+    <div class="row"><div class="k">When</div><div class="v">Last held Sunday 1 November 2026 &middot; next date coming soon</div></div>
     <div class="row"><div class="k">Where</div><div class="v">House of Habits, Hervey Bay</div></div>
     <div class="row"><div class="k">Investment</div><div class="v">$20 launch price, with proceeds donated to our local hospice</div></div>
     <div class="row"><div class="k">Take home</div><div class="v">An eye pillow to help you return to rest, and a little notebook for your reflections</div></div>
@@ -341,7 +364,7 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
 <section class="statement">
   <h2>All stages of grief are welcome</h2>
   <p style="max-width:40rem;margin:0 auto 1.8rem;opacity:.95">Come to nurture your mind and your heart. You don't need to be ready, or know what to say. You only need to arrive.</p>
-  <a class="btn" href="https://mtc.splose.com/online-booking/0d0882b6-79dd-407c-867c-73751ddba4ab" target="_blank" rel="noopener">Book your place</a>
+  <a class="btn" href="#waitlist">Join the waitlist</a>
 </section>
 
 
@@ -368,6 +391,10 @@ footer{background:var(--teal);color:var(--cream);padding:2.6rem 2rem}
   t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');});
  n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){
   n.classList.remove('open');t.setAttribute('aria-expanded','false');});});})();
+</script>
+<script>
+(function(){if(location.search.indexOf('joined=1')<0)return;var w=document.getElementById('waitlist');if(!w)return;
+ var f=w.querySelector('form'),d=w.querySelector('.wl-done');if(f)f.hidden=true;if(d)d.hidden=false;})();
 </script>
 <script src="events.js"></script>
 </body>

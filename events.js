@@ -9,6 +9,7 @@
    One-off event:   give it start and end ("2026-11-01T10:00").
    Monthly event:   give it monthly:{weekday, nth, start, end}.
                     weekday 0 = Sunday ... 5 = Friday. nth 1 = first.
+                    Optional until:"2026-12-31" stops it after that date.
 
    Past events disappear on their own. The banner always shows the
    soonest upcoming event that has banner:true.
@@ -39,6 +40,7 @@ var MTC_EVENTS = [
     title: "Restorative Yoga",
     kicker: "First Friday of every month",
     monthly: { weekday: 5, nth: 1, start: "18:00", end: "19:00" },
+    until: "2026-12-31",
     place: "@pilates 24/7, Hervey Bay",
     price: "$20",
     blurb: "An hour of deep, supported rest to close the working week. Long, held shapes softened with bolsters and blankets, slow breath, and time for your nervous system to settle all the way down. We finish with a hot drink and nibbles together.",
@@ -48,9 +50,29 @@ var MTC_EVENTS = [
     ],
     image: "images/restorative.jpg",
     imageAlt: "A woman lying on a yoga mat, one hand resting on her chest and one on her belly",
-    embed: "2c9e926b-9679-42cc-89fb-c05c5ac4a364",
+    embed: "",
+    book: "https://checkout.square.site/merchant/MLJ6RH9DP5GHS/checkout/QFBXOEEYI2AL3BLMHEEVNOEZ",
     bookLabel: "Book your place",
     more: "events.html#restorative",
+    banner: true
+  },
+  {
+    id: "restorative-hoh",
+    title: "Restorative Yoga",
+    kicker: "Second Friday of every month",
+    monthly: { weekday: 5, nth: 2, start: "18:00", end: "19:00" },
+    until: "2026-12-31",
+    place: "House of Habits studio, Hervey Bay",
+    price: "$15",
+    blurb: "An hour of deep, supported rest to close the working week. Long, held shapes softened with bolsters and blankets, slow breath, and time for your nervous system to settle all the way down.",
+    extras: [
+      "Bring a pillow and a blanket for your comfort, and a yoga bolster if you have one"
+    ],
+    image: "images/restorative.jpg",
+    imageAlt: "A woman lying on a yoga mat, one hand resting on her chest and one on her belly",
+    embed: "2c9e926b-9679-42cc-89fb-c05c5ac4a364",
+    bookLabel: "Book your place",
+    more: "events.html#restorative-hoh",
     banner: true
   }
 ];
@@ -70,6 +92,7 @@ var MTC_EVENTS = [
     return h + (p.mi ? ":" + pad(p.mi) : "") + (p.h < 12 ? "am" : "pm"); }
   function range(s, e) { var a = time(s), b = time(e);
     if (a.slice(-2) === b.slice(-2)) a = a.slice(0, -2); return a + " to " + b; }
+  var NTH = ["","First","Second","Third","Fourth","Fifth"];
   function day(d) { var p = bne(d); return DAYS[p.wd] + " " + p.d + " " + MONTHS[p.m]; }
 
   /* next occurrence of a monthly event that hasn't finished yet */
@@ -80,6 +103,7 @@ var MTC_EVENTS = [
       var dd = 1 + ((ev.monthly.weekday - first + 7) % 7) + 7 * (ev.monthly.nth - 1);
       var ds = y + "-" + pad(m + 1) + "-" + pad(dd);
       var e = at(ds, ev.monthly.end);
+      if (ev.until && ds > ev.until) return null;
       if (e > now) return { start: at(ds, ev.monthly.start), end: e };
       m++; if (m > 11) { m = 0; y++; }
     }
@@ -141,6 +165,7 @@ var MTC_EVENTS = [
 
   /* ---------- homepage "Coming up" line ---------- */
   var line = document.getElementById("coming-up");
+  if (line && !list.length) line.style.display = "none";
   if (line && list.length) {
     var n = list[0];
     line.innerHTML = 'Coming up: <a href="' + esc(n.ev.more) + '" style="color:var(--terracotta)">' + esc(n.ev.title) +
@@ -165,18 +190,19 @@ var MTC_EVENTS = [
             '<p class="when">' + esc(when) + " &middot; " + esc(range(o.start, o.end)) + "<br>" + esc(ev.place) + " &middot; " + esc(ev.price) + "</p>" +
             "<p>" + esc(ev.blurb) + "</p>" +
             '<ul class="morelist">' + ev.extras.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
-            '<div class="evbtns"><a class="btn" href="#book-' + esc(ev.id) + '">' + esc(ev.bookLabel) + "</a>" +
+            '<div class="evbtns"><a class="btn" href="' + (ev.embed ? "#book-" + esc(ev.id) : esc(ev.book || "contact.html")) + '"' + (!ev.embed && /^https?:/.test(ev.book || "") ? ' target="_blank" rel="noopener"' : "") + '>' + esc(ev.bookLabel) + "</a>" +
               (ev.more.indexOf("events.html") === 0 ? "" : '<a class="btn ghost dark" href="' + esc(ev.more) + '">More info</a>') + "</div>" +
           "</div></article>";
       }).join("");
 
       /* one Splose booking form per upcoming event */
       var bk = document.getElementById("event-booking");
+      if (bk && !list.some(function (o) { return o.ev.embed; })) { var bs = document.getElementById("book"); if (bs) bs.style.display = "none"; bk = null; }
       if (bk) {
         bk.innerHTML = list.filter(function (o) { return o.ev.embed; }).map(function (o) {
           var u = esc(o.ev.embed);
           return '<div class="bkblock" id="book-' + esc(o.ev.id) + '">' +
-            '<h3>' + esc(o.ev.title) + '</h3><p class="when">' + esc(o.ev.monthly ? "First Friday of every month" : day(o.start)) +
+            '<h3>' + esc(o.ev.title) + '</h3><p class="when">' + esc(o.ev.monthly ? NTH[o.ev.monthly.nth] + " " + DAYS[o.ev.monthly.weekday] + " of every month" : day(o.start)) +
             " &middot; " + esc(range(o.start, o.end)) + '</p>' +
             '<div class="bkframe"><iframe class="splose-booking" src="https://mtc.splose.com/online-booking/' + u + '?embedVersion=v2" title="Book ' + esc(o.ev.title) + '" scrolling="auto" width="100%" height="700" loading="lazy" frameborder="0" style="display:block;transition:height 0.3s ease"></iframe></div></div>';
         }).join("");
