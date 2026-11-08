@@ -11,6 +11,10 @@
                     weekday 0 = Sunday ... 5 = Friday. nth 1 = first.
                     Optional until:"2026-12-31" stops it after that date.
 
+   Date not set yet:  give it soon:true (no start or end). It shows on
+                    events.html as "Next date coming soon", after the dated
+                    events, and never in the banner.
+
    Past events disappear on their own. The banner always shows the
    soonest upcoming event that has banner:true.
    ===================================================================== */
@@ -19,21 +23,20 @@ var MTC_EVENTS = [
     id: "grief-garden",
     title: "The Grief Garden",
     kicker: "A two-hour mini retreat",
-    start: "2026-11-01T10:00",
-    end: "2026-11-01T12:00",
-    place: "House of Habits studio, Hervey Bay",
-    price: "$20 · proceeds to our local hospice",
+    soon: true,
+    place: "Hervey Bay",
+    price: "",
     blurb: "A gentle space to tend your grief through yoga, breath and rest. Whatever your loss, and however long ago, you are welcome here. No yoga experience needed, and no pressure to talk or share.",
     extras: [
-      "Take home an eye pillow and a little notebook for your reflections",
-      "Limited to 20 places"
+      "Small group, so places are limited"
     ],
     image: "images/grief-garden-hands.jpg",
     imageAlt: "Hands resting gently in a lap during a quiet moment",
-    embed: "0d0882b6-79dd-407c-867c-73751ddba4ab",
-    bookLabel: "Book your place",
+    embed: "",
+    book: "grief-garden.html#waitlist",
+    bookLabel: "Join the waitlist",
     more: "grief-garden.html",
-    banner: true
+    banner: false
   },
   {
     id: "restorative",
@@ -45,7 +48,6 @@ var MTC_EVENTS = [
     price: "$20",
     blurb: "An hour of deep, supported rest to close the working week. Long, held shapes softened with bolsters and blankets, slow breath, and time for your nervous system to settle all the way down. We finish with a hot drink and nibbles together.",
     extras: [
-      "Includes an eye pillow to take home",
       "Bring a pillow and a blanket for your comfort, and a yoga bolster if you have one"
     ],
     image: "images/restorative.jpg",
@@ -59,7 +61,8 @@ var MTC_EVENTS = [
   {
     id: "restorative-hoh",
     title: "Restorative Yoga",
-    kicker: "Second Friday of every month",
+    kicker: "On select Fridays",
+    schedule: "On select Fridays",
     monthly: { weekday: 5, nth: 2, start: "18:00", end: "19:00" },
     until: "2026-12-31",
     place: "House of Habits studio, Hervey Bay",
@@ -113,6 +116,7 @@ var MTC_EVENTS = [
   function upcoming(now) {
     var list = [];
     MTC_EVENTS.forEach(function (ev) {
+      if (ev.soon) return;
       var o = ev.monthly ? nextMonthly(ev, now)
         : { start: new Date(ev.start + ":00" + TZ), end: new Date(ev.end + ":00" + TZ) };
       if (o && o.end > now) list.push({ ev: ev, start: o.start, end: o.end });
@@ -174,20 +178,21 @@ var MTC_EVENTS = [
 
   /* ---------- cards on events.html ---------- */
   var box = document.getElementById("event-list");
+  var soonList = MTC_EVENTS.filter(function (ev) { return ev.soon; }).map(function (ev) { return { ev: ev, soon: true }; });
   if (box) {
-    if (!list.length) {
+    if (!list.length && !soonList.length) {
       box.innerHTML = '<p class="evempty">Nothing on the calendar just now. New workshops are on their way, so check back soon or <a href="contact.html">ask to hear about the next one</a>.</p>';
     } else {
-      box.innerHTML = list.map(function (o, k) {
-        var ev = o.ev, p = bne(o.start);
-        var when = ev.monthly ? "Next class " + day(o.start) : day(o.start) + " " + p.y;
+      box.innerHTML = list.concat(soonList).map(function (o, k) {
+        var ev = o.ev, p = o.soon ? null : bne(o.start);
+        var when = o.soon ? "Next date coming soon" : ev.monthly ? "Next class " + day(o.start) : day(o.start) + " " + p.y;
         return '<article class="evcard' + (k % 2 ? " flip" : "") + '" id="' + esc(ev.id) + '">' +
           '<div class="evimg"><img loading="lazy" decoding="async" src="' + esc(ev.image) + '" alt="' + esc(ev.imageAlt) + '"></div>' +
           '<div class="evtxt">' +
-            '<div class="evdate"><span class="dd">' + p.d + '</span><span class="mm">' + MONTHS[p.m].slice(0, 3) + "</span></div>" +
+            (o.soon ? "" : '<div class="evdate"><span class="dd">' + p.d + '</span><span class="mm">' + MONTHS[p.m].slice(0, 3) + "</span></div>") +
             '<p class="kick">' + esc(ev.kicker) + "</p>" +
             "<h2>" + esc(ev.title) + "</h2>" +
-            '<p class="when">' + esc(when) + " &middot; " + esc(range(o.start, o.end)) + "<br>" + esc(ev.place) + " &middot; " + esc(ev.price) + "</p>" +
+            '<p class="when">' + esc(when) + (o.soon ? "" : " &middot; " + esc(range(o.start, o.end))) + "<br>" + esc(ev.place) + (ev.price ? " &middot; " + esc(ev.price) : "") + "</p>" +
             "<p>" + esc(ev.blurb) + "</p>" +
             '<ul class="morelist">' + ev.extras.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
             '<div class="evbtns"><a class="btn" href="' + (ev.embed ? "#book-" + esc(ev.id) : esc(ev.book || "contact.html")) + '"' + (!ev.embed && /^https?:/.test(ev.book || "") ? ' target="_blank" rel="noopener"' : "") + '>' + esc(ev.bookLabel) + "</a>" +
@@ -202,7 +207,7 @@ var MTC_EVENTS = [
         bk.innerHTML = list.filter(function (o) { return o.ev.embed; }).map(function (o) {
           var u = esc(o.ev.embed);
           return '<div class="bkblock" id="book-' + esc(o.ev.id) + '">' +
-            '<h3>' + esc(o.ev.title) + '</h3><p class="when">' + esc(o.ev.monthly ? NTH[o.ev.monthly.nth] + " " + DAYS[o.ev.monthly.weekday] + " of every month" : day(o.start)) +
+            '<h3>' + esc(o.ev.title) + '</h3><p class="when">' + esc(o.ev.schedule ? o.ev.schedule : o.ev.monthly ? NTH[o.ev.monthly.nth] + " " + DAYS[o.ev.monthly.weekday] + " of every month" : day(o.start)) +
             " &middot; " + esc(range(o.start, o.end)) + '</p>' +
             '<div class="bkframe"><iframe class="splose-booking" src="https://mtc.splose.com/online-booking/' + u + '?embedVersion=v2" title="Book ' + esc(o.ev.title) + '" scrolling="auto" width="100%" height="700" loading="lazy" frameborder="0" style="display:block;transition:height 0.3s ease"></iframe></div></div>';
         }).join("");
